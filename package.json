@@ -1,0 +1,31 @@
+{
+  "name": "hexmen.com",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ashsearle/hexmen.com.git",
+  "author": "Ash Searle <ash@hexmen.com> (https://hexmen.com/)",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "develop": "gatsby develop -H 0.0.0.0",
+    "build": "gatsby build --prefix-paths",
+    "serve": "gatsby serve --prefix-paths",
+    "lint": ""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md,html}": "prettier --write"
+  },
+  "dependencies": {
+    "gatsby": "^2.24.80",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.2",
+    "prettier": "^2.1.2",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  }
+}

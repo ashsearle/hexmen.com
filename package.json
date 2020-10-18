@@ -22,6 +22,10 @@
   },
   "dependencies": {
     "gatsby": "^2.24.80",
+    "gatsby-remark-copy-linked-files": "^2.3.19",
+    "gatsby-remark-vscode": "^3.1.0",
+    "gatsby-source-filesystem": "^2.3.35",
+    "gatsby-transformer-remark": "^2.8.42",
     "husky": "^4.3.0",
     "lint-staged": "^10.4.2",
     "prettier": "^2.1.2",

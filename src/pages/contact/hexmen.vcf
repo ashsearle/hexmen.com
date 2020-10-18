@@ -1,0 +1,16 @@
+BEGIN:VCARD
+VERSION:4.0
+FN;LANGUAGE=en:Contact Hexmen
+REV:20190608T110600Z
+NAME:Ash Searle
+N:Searle;Ash;Mr.;;
+TITLE;LANGUAGE=en:Director
+ORG:Hexmen Limited
+ADR;LANGUAGE=en:;;3 Isis Avenue;Bicester;Oxfordshire;OX26 2GR;England
+TEL;TYPE=cell:+447977554521
+TZ:Europe/London
+EMAIL;TYPE=work:ash@hexmen.com
+LANG:en
+URL:https://hexmen.com
+NOTE;LANGUAGE=en:Full-stack contract software development
+END:VCARD

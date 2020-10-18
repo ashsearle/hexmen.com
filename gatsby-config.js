@@ -11,14 +11,25 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `src`,
-        path: `${__dirname}/src/`,
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/src/blog`,
       },
     },
     {
       resolve: "gatsby-transformer-remark",
       options: {
-        plugins: [`gatsby-remark-vscode`, "gatsby-remark-copy-linked-files"],
+        plugins: [
+          `gatsby-remark-vscode`,
+          "gatsby-remark-copy-linked-files",
+          "gatsby-remark-smartypants",
+        ],
       },
     },
   ],

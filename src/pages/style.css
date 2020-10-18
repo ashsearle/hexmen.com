@@ -9,6 +9,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  margin: 0 auto;
+  max-width: 80ch;
 }
 main {
   flex-grow: 1;
@@ -20,4 +22,7 @@ main {
   padding: 1vh;
   display: flex;
   justify-content: space-around;
+}
+.grvsc-container {
+  border-radius: 0 !important;
 }

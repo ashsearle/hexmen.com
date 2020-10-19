@@ -43,6 +43,12 @@ h6 code {
   margin-top: -0.725rem;
   margin-bottom: 0.725rem;
 }
+.line-layout {
+  display: flex;
+}
+.line-layout.gap-s > * + * {
+  margin-left: 1ch;
+}
 @media (max-width: 600px) {
   #gatsby-focus-wrapper {
     padding: 0 1rem;

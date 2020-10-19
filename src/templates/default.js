@@ -6,10 +6,12 @@ import "../pages/style.css";
 const isProduction = process.env.NODE_ENV === "production";
 
 export default function (props) {
+  const { pageContext } = props;
   return (
-    <Layout>
+    <Layout pageContext={pageContext}>
       <h1>{props.data.markdownRemark.frontmatter.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }} />
+      <div id="site-footer">&copy; 2020 Hexmen Limited</div>
 
       {isProduction ? null : (
         <pre>

@@ -34,7 +34,7 @@ export default function (props) {
           ))}
         </section>
       </main>
-      <nav id="site-footer">&copy; 2020 Hexmen Limited</nav>
+      <div id="site-footer">&copy; 2020 Hexmen Limited</div>
     </>
   );
 }

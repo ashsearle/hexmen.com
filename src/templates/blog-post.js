@@ -45,12 +45,14 @@ export default function (props) {
   const publishedDate = moment(props.data.markdownRemark.frontmatter.date).format("D MMM YYYY");
   return (
     <Layout>
-      <h1>{props.data.markdownRemark.frontmatter.title}</h1>
-      <div className="byline">
-        <time dateTime={props.data.markdownRemark.frontmatter.date}>{publishedDate}</time> |{" "}
-        {props.data.markdownRemark.timeToRead} min read
-      </div>
-      <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }} />
+      <article>
+        <h1>{props.data.markdownRemark.frontmatter.title}</h1>
+        <div className="byline">
+          <time dateTime={props.data.markdownRemark.frontmatter.date}>{publishedDate}</time> |{" "}
+          {props.data.markdownRemark.timeToRead} min read
+        </div>
+        <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }} />
+      </article>
       <BlogNav previous={previous} next={next} />
 
       {isProduction ? null : (

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
+import { graphql, Link } from "gatsby";
 import moment from "moment";
 import logoDataURI from "./hexmen-logo-2020-10-13.svg";
 import "./style.css";

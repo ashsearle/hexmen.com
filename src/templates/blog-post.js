@@ -41,17 +41,20 @@ const BlogNav = ({ previous, next }) => {
 };
 
 export default function (props) {
-  const { previous, next } = props.pageContext;
-  const publishedDate = moment(props.data.markdownRemark.frontmatter.date).format("D MMM YYYY");
+  const { pageContext, data } = props;
+  const { markdownRemark } = data;
+  const { previous, next } = pageContext;
+  const { frontmatter } = markdownRemark;
+  const publishedDate = moment(frontmatter.date).format("D MMM YYYY");
   return (
-    <Layout>
+    <Layout pageContext={pageContext} frontmatter={frontmatter}>
       <article>
-        <h1>{props.data.markdownRemark.frontmatter.title}</h1>
+        <h1>{frontmatter.title}</h1>
         <div className="byline">
-          <time dateTime={props.data.markdownRemark.frontmatter.date}>{publishedDate}</time> |{" "}
-          {props.data.markdownRemark.timeToRead} min read
+          <time dateTime={frontmatter.date}>{publishedDate}</time> | {markdownRemark.timeToRead} min
+          read
         </div>
-        <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }} />
+        <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
       </article>
       <BlogNav previous={previous} next={next} />
 

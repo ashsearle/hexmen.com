@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     siteUrl: "https://hexmen.com",
+    name: "Hexmen",
     social: {
       twitter: "@hexmen",
     },
@@ -32,6 +33,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-react-helmet`,
     {
       resolve: "gatsby-plugin-typography",
       options: {

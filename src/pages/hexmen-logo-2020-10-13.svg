@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-34 -34 68 68" fill="none" stroke="#00a" stroke-width="6">
+  <polyline stroke-opacity="0.167" points="13.86,16.00 20.78,12.00 20.78,4.00"></polyline>
+  <polyline stroke-opacity="0.333" points="-6.93,20.00 0.00,24.00 6.93,20.00"></polyline>
+  <polyline stroke-opacity="0.500" points="-20.78,4.00 -20.78,12.00 -13.86,16.00"></polyline>
+  <polyline stroke-opacity="0.667" points="-13.86,-16.00 -20.78,-12.00 -20.78,-4.00"></polyline>
+  <polyline stroke-opacity="0.833" points="6.93,-20.00 0.00,-24.00 -6.93,-20.00"></polyline>
+  <g>
+    <line x1="6.93" y1="-4.00" x2="20.78" y2="-12.00"></line>
+    <circle r="10"></circle>
+    <polyline points="20.78,-4.00 20.78,-12.00 13.86,-16.00"></polyline>
+  </g>
+</svg>
+

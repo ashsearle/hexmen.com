@@ -1,14 +1,20 @@
 import React from "react";
 import { Link } from "gatsby";
 import moment from "moment";
+import logoDataURI from "./hexmen-logo-2020-10-13.svg";
 import "./style.css";
 
 export default function (props) {
   const recentPosts = props.data.allMarkdownRemark.nodes;
   return (
     <>
+      <header className="branding">
+        <h1 style={{ display: "flex", alignItems: "center", fontSize: "2rem", lineHeight: 1.2 }}>
+          <img style={{ height: "1em" }} src={logoDataURI} />
+          <span>Hexmen</span>
+        </h1>
+      </header>
       <main>
-        Hexmen
         <section id="recent">
           <h2>Recent posts</h2>
           {recentPosts.map((post) => (
@@ -18,7 +24,7 @@ export default function (props) {
                   <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
                 </h3>
                 <span className="post-meta">
-                  <time datetime={post.frontmatter.date}>
+                  <time dateTime={post.frontmatter.date}>
                     {moment(post.frontmatter.date).fromNow()}
                   </time>{" "}
                   {" | "} {post.timeToRead} min read

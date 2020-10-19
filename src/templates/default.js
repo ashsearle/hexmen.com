@@ -2,6 +2,7 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import moment from "moment";
 import Layout from "../components/layout.js";
+import logoDataURI from "../pages/hexmen-logo-2020-10-13.svg";
 import "../pages/style.css";
 
 const isProduction = process.env.NODE_ENV === "production";
@@ -45,6 +46,35 @@ export default function (props) {
   const publishedDate = moment(props.data.markdownRemark.frontmatter.date).format("D MMM YYYY");
   return (
     <Layout>
+      <header
+        className="branding"
+        style={{
+          display: "flex",
+          alignItems: "baseline",
+          justifyContent: "space-between",
+        }}
+      >
+        <h1
+          style={{
+            display: "flex",
+            alignItems: "center",
+            fontSize: "1rem",
+            lineHeight: 1.2,
+          }}
+        >
+          <img style={{ height: "1em" }} src={logoDataURI} alt="" />
+          <span>Hexmen</span>
+        </h1>
+        <div
+          style={{
+            display: "flex",
+            gap: "1ch",
+          }}
+        >
+          <Link to="/about/">About</Link>
+          <Link to="/contact/">Contact</Link>
+        </div>
+      </header>
       <h1>{props.data.markdownRemark.frontmatter.title}</h1>
       <div className="byline">
         <time dateTime={props.data.markdownRemark.frontmatter.date}>{publishedDate}</time> |{" "}

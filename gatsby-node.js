@@ -11,7 +11,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       createNodeField({
         node,
         name: `slug`,
-        value: `blog/${slug}`,
+        value: `/blog${slug}`,
       });
     } else {
       createNodeField({
@@ -20,16 +20,21 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
         value: slug,
       });
     }
+    createNodeField({
+      node,
+      name: `source`,
+      value: sourceInstanceName,
+    });
   }
 };
 
 // createPages does the hard work of creating pages based on nodes
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
-  const result = await graphql(`
+  const blogPostsResult = await graphql(`
     query {
       allMarkdownRemark(
-        filter: { fields: { slug: { regex: "/^blog/" } } }
+        filter: { fields: { source: { eq: "blog" } } }
         sort: { fields: [frontmatter___date], order: DESC }
         limit: 1000
       ) {
@@ -46,7 +51,7 @@ exports.createPages = async ({ graphql, actions }) => {
   `);
 
   const defaultTemplate = path.resolve("src/templates/default.js");
-  result.data.allMarkdownRemark.nodes.forEach((markdownNode, index, posts) => {
+  blogPostsResult.data.allMarkdownRemark.nodes.forEach((markdownNode, index, posts) => {
     const { slug } = markdownNode.fields;
     const previous = posts[index + 1] || null;
     const next = posts[index - 1] || null;
@@ -55,6 +60,31 @@ exports.createPages = async ({ graphql, actions }) => {
       path: slug,
       component: defaultTemplate,
       context: { slug, next, previous },
+    });
+  });
+
+  const pagesResult = await graphql(`
+    query {
+      allMarkdownRemark(filter: { fields: { source: { eq: "pages" } } }) {
+        nodes {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
+  `);
+
+  // const defaultTemplate = path.resolve("src/templates/default.js");
+  pagesResult.data.allMarkdownRemark.nodes.forEach((markdownNode) => {
+    const { slug } = markdownNode.fields;
+    createPage({
+      path: slug,
+      component: defaultTemplate,
+      context: { slug },
     });
   });
 };

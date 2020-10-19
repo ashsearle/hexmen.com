@@ -7,6 +7,9 @@ import "../pages/style.css";
 const isProduction = process.env.NODE_ENV === "production";
 
 const BlogNav = ({ previous, next }) => {
+  if (!previous && !next) {
+    return null;
+  }
   return (
     <nav>
       <ul
@@ -20,14 +23,14 @@ const BlogNav = ({ previous, next }) => {
       >
         <li>
           {previous && (
-            <Link to={`/${previous.fields.slug}`} rel="prev" style={{ marginRight: 20 }}>
+            <Link to={`${previous.fields.slug}`} rel="prev" style={{ marginRight: 20 }}>
               ← {previous.frontmatter.title}
             </Link>
           )}
         </li>
         <li>
           {next && (
-            <Link to={`/${next.fields.slug}`} rel="next">
+            <Link to={`${next.fields.slug}`} rel="next">
               {next.frontmatter.title} →
             </Link>
           )}

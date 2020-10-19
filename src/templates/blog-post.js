@@ -4,8 +4,6 @@ import moment from "moment";
 import Layout from "../components/layout.js";
 import "../pages/style.css";
 
-const isProduction = process.env.NODE_ENV === "production";
-
 const BlogNav = ({ previous, next }) => {
   if (!previous && !next) {
     return null;
@@ -40,7 +38,7 @@ const BlogNav = ({ previous, next }) => {
   );
 };
 
-export default function (props) {
+export default function BlogPostTemplate(props) {
   const { pageContext, data } = props;
   const { markdownRemark } = data;
   const { previous, next } = pageContext;
@@ -57,12 +55,6 @@ export default function (props) {
         <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
       </article>
       <BlogNav previous={previous} next={next} />
-
-      {isProduction ? null : (
-        <pre>
-          <code>{JSON.stringify(props, null, 2)}</code>
-        </pre>
-      )}
     </Layout>
   );
 }

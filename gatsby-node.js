@@ -1,11 +1,18 @@
 const path = require("path");
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
+const isProduction = process.env.NODE_ENV === "production";
+
 // onCreateNode is an opportunity to add fields to nodes in Gatsby GraphQL store
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
   if (node.internal.type === "MarkdownRemark") {
     const { sourceInstanceName } = getNode(node.parent);
+    const { frontmatter = {} } = node;
+    const { status } = frontmatter;
+    if (status === "draft" && isProduction) {
+      return;
+    }
     const slug = createFilePath({ node, getNode, basePath: sourceInstanceName });
     if (sourceInstanceName === "blog") {
       createNodeField({

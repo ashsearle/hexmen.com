@@ -5,7 +5,7 @@ modified: "2011-01-03T17:20:14.000Z"
 folder: "2008/07/21/microformats-dark-data-and-css-part-2"
 ---
 
-The [first part of this article](http://hexmen.com/blog/2008/07/microformats-dark-data-and-css-part-1/) considered over 100 HTML 4 attributes and came to the conclusion `class` was the only one suitable for storing _machine data_ (i.e. data specifically inserted and intended for machine parsing.)
+The [first part of this article](https://hexmen.com/blog/2008/07/microformats-dark-data-and-css-part-1/) considered over 100 HTML 4 attributes and came to the conclusion `class` was the only one suitable for storing _machine data_ (i.e. data specifically inserted and intended for machine parsing.)
 
 In this second part, I'll review several ways to store data in the class attribute, determine the 'best' method, and suggest a CSS implementation change that is (IMO) both trivial and immensely beneficial.
 

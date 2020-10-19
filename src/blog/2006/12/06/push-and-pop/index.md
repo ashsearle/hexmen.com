@@ -36,7 +36,7 @@ Download: [push-pop.js](/code/push-pop.js)
 
 ### Testing
 
-Always up for a challenge, I've tried to produce a bug-free implementation that conforms to the specification. You can see how it fares on my [push and pop test page](http://hexmen.com/tests/pushpop.html) (fixed link). The test page allows you to compare several library implementations to the browser's built-in implementation, and mine. There are about thirty tests in all, and you should find that even the browser's implementations fail a couple of tests (some fail substantially more.)
+Always up for a challenge, I've tried to produce a bug-free implementation that conforms to the specification. You can see how it fares on my [push and pop test page](https://hexmen.com/tests/pushpop.html) (fixed link). The test page allows you to compare several library implementations to the browser's built-in implementation, and mine. There are about thirty tests in all, and you should find that even the browser's implementations fail a couple of tests (some fail substantially more.)
 
 So, why the high failure rate? Simple: most browsers haven't implemented arrays correctly; their understanding of an _array index_ and `length` is wrong. From the specification (section 15.4):
 

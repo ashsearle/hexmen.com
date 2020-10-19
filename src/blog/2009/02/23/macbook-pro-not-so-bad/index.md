@@ -5,7 +5,7 @@ modified: "2011-01-03T17:20:13.000Z"
 folder: "2009/02/23/macbook-pro-not-so-bad"
 ---
 
-Two years after [moaning about my MacBook Pro](http://hexmen.com/blog/2007/02/i-hate-my-macbook-pro/) I figure it's time for an update:
+Two years after [moaning about my MacBook Pro](https://hexmen.com/blog/2007/02/i-hate-my-macbook-pro/) I figure it's time for an update:
 
 It's not so bad...
 
@@ -17,7 +17,7 @@ This was pretty straight forward: download [StartupSound.prefPane](http://www5e.
 
 reconfigured keyboard layout using Ukulele
 
-(definitely a personal preference) I configured a [keyboard layout](http://en.wikipedia.org/wiki/Keyboard_layout) to match UK PC keyboards: backtick (`` ` ``) to the left of 1, hash# and tilde~ next to return, at@ and double-quote" reversed (double-quote via Shift+2) and finally (I think) putting backslash and pipe| to the left of Z) If you want it, you can [download my British PC keyboard layout](http://hexmen.com/uploads/British%20PC.keylayout) (if I remember right, you have to move the file into `/System/Library/Keyboard Layouts/` and may need to restart before you can choose it in System Preferences / International / Input Menu - and if you want a decent icon you'll need the [flag icon](http://hexmen.com/uploads/British%20PC.icns) to bung in the `Keyboard Layouts` folder too.)
+(definitely a personal preference) I configured a [keyboard layout](http://en.wikipedia.org/wiki/Keyboard_layout) to match UK PC keyboards: backtick (`` ` ``) to the left of 1, hash# and tilde~ next to return, at@ and double-quote" reversed (double-quote via Shift+2) and finally (I think) putting backslash and pipe| to the left of Z) If you want it, you can [download my British PC keyboard layout](https://hexmen.com/uploads/British%20PC.keylayout) (if I remember right, you have to move the file into `/System/Library/Keyboard Layouts/` and may need to restart before you can choose it in System Preferences / International / Input Menu - and if you want a decent icon you'll need the [flag icon](https://hexmen.com/uploads/British%20PC.icns) to bung in the `Keyboard Layouts` folder too.)
 
 There is still one rather annoying aspect of the keyboard layout: it changes back to a Mac layout whenever I use [Opera](http://www.opera.com) and tab into a password field - god knows what that's all about!? I've got used to it now though and can quickly change back with Apple+Space
 

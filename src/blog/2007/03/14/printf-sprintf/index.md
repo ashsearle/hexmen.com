@@ -7,7 +7,7 @@ folder: "2007/03/14/printf-sprintf"
 
 Avoid writing formatting functions in JavaScript by grabbing yourself a decent sprintf implementation - handling padding, truncation, floating-point numbers, left/right alignment and _re-ordered arguments_.
 
-You can [download sprintf for JavaScript](http://hexmen.com/js/sprintf.js), available under the [Create Commons Attribution License](http://creativecommons.org/licenses/by/2.5/). Now license free (use it where/when/how you like.)
+You can [download sprintf for JavaScript](https://hexmen.com/js/sprintf.js), available under the [Create Commons Attribution License](http://creativecommons.org/licenses/by/2.5/). Now license free (use it where/when/how you like.)
 
 The version I've written is based strongly on [Perl's sprintf implementation](http://perldoc.perl.org/functions/sprintf.html), allowing argument reordering to help with internationalisation (i18n). Some overly simplistic examples follow, leaving room for obvious improvements like:
 

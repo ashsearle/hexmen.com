@@ -7,7 +7,7 @@ folder: "2009/03/09/all-in-one-cookie-function"
 
 Users stumbling across jQuery may notice the API's designed so a method's behaviour varies depending on the number and type of arguments passed in a call (have a look at the [jQuery method](http://docs.jquery.com/Core/jQuery)!). In the right hands, this flexibility produces clean and elegant code without burdening the developer with 101 new method names to learn.
 
-Let's do the same for cookies (source: [cookie.js](http://hexmen.com/js/cookie.js)).
+Let's do the same for cookies (source: [cookie.js](https://hexmen.com/js/cookie.js)).
 
 ### Three into one does go
 

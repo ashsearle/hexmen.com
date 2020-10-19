@@ -28,10 +28,17 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const result = await graphql(`
     query {
-      allMarkdownRemark {
+      allMarkdownRemark(
+        filter: { fields: { slug: { regex: "/^blog/" } } }
+        sort: { fields: [frontmatter___date], order: DESC }
+        limit: 1000
+      ) {
         nodes {
           fields {
             slug
+          }
+          frontmatter {
+            title
           }
         }
       }
@@ -39,12 +46,15 @@ exports.createPages = async ({ graphql, actions }) => {
   `);
 
   const defaultTemplate = path.resolve("src/templates/default.js");
-  result.data.allMarkdownRemark.nodes.forEach((markdownNode) => {
+  result.data.allMarkdownRemark.nodes.forEach((markdownNode, index, posts) => {
     const { slug } = markdownNode.fields;
+    const previous = posts[index + 1] || null;
+    const next = posts[index - 1] || null;
+
     createPage({
       path: slug,
       component: defaultTemplate,
-      context: { slug },
+      context: { slug, next, previous },
     });
   });
 };

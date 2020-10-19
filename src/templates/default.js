@@ -20,7 +20,7 @@ const BlogNav = ({ previous, next }) => {
       >
         <li>
           {previous && (
-            <Link to={`/${previous.fields.slug}}`} rel="prev" style={{ marginRight: 20 }}>
+            <Link to={`/${previous.fields.slug}`} rel="prev" style={{ marginRight: 20 }}>
               ← {previous.frontmatter.title}
             </Link>
           )}

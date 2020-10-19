@@ -23,7 +23,7 @@ if (DEBUG) {
 }
 ```
 
-I still didn't like the fact that `if (DEBUG)` was appearing all over the place. So, after stumbling across [call_user_func_array](http://uk2.php.net/manual/en/function.call-user-func-array.php) I've implemented my own `debug` function:
+I still didn't like the fact that `if (DEBUG)` was appearing all over the place. So, after stumbling across [call_user_func_array](https://www.php.net/manual/en/function.call-user-func-array) I've implemented my own `debug` function:
 
 ```php
 function debug()

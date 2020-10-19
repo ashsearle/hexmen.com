@@ -21,11 +21,11 @@ PHP, the way we're running it (via `mod_php`) couldn't be further from the appli
 
 Storing sessions in files means PHP has to take heavy-handed precautions against concurrent read/write access to the session - it locks the session file for the duration of a request.
 
-The idea never occurred to us - that session management would block user-requests, stopping concurrent requests completing (think AJAX.) Fortunately the quick-fix solution is simple: call [session_write_close()](http://php.net/session_write_close) as soon as you've finished writing to the session. Depending how you use sessions, you may find a number of actions only need read-access to the session, in which case you may want to open and close the session together: `@session_start(); session_write_close()`
+The idea never occurred to us - that session management would block user-requests, stopping concurrent requests completing (think AJAX.) Fortunately the quick-fix solution is simple: call [session_write_close()](https://www.php.net/session_write_close) as soon as you've finished writing to the session. Depending how you use sessions, you may find a number of actions only need read-access to the session, in which case you may want to open and close the session together: `@session_start(); session_write_close()`
 
 That's the quick fix, but there are plenty of other options to explore to. A quick code-audit could identify a ton of actions, controllers and pages that simply don't need session access at all. Now you know PHP locks the session file, you probably want to avoid calling `session_start()` unless absolutely necessary.
 
-Secondly, PHP allows you to choose what type of session-management you use. You can use [memcached](http://www.eu.socialtext.net/memcached/index.cgi?sessions) either on its own, or with a database backing-store. You could use a MySQL back-end, or roll your own session management registered using [session_set_save_handler](http://uk2.php.net/manual/en/function.session-set-save-handler.php). It's really up to you.
+Secondly, PHP allows you to choose what type of session-management you use. You can use memcached either on its own, or with a database backing-store. You could use a MySQL back-end, or roll your own session management registered using [session_set_save_handler](https://www.php.net/manual/en/function.session-set-save-handler.php). It's really up to you.
 
 Perhaps that's the problem right there. All the session-management hooks are there because the default session management sucks. The simplicity of using sessions lulls you into a false sense of security, but make no mistake - sessions need to be handled with care if you've any hope of running a high-volume website.
 

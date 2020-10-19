@@ -7,9 +7,9 @@ folder: "2007/03/14/printf-sprintf"
 
 Avoid writing formatting functions in JavaScript by grabbing yourself a decent sprintf implementation - handling padding, truncation, floating-point numbers, left/right alignment and _re-ordered arguments_.
 
-You can [download sprintf for JavaScript](https://hexmen.com/js/sprintf.js), available under the [Create Commons Attribution License](http://creativecommons.org/licenses/by/2.5/). Now license free (use it where/when/how you like.)
+You can [download sprintf for JavaScript](https://hexmen.com/js/sprintf.js), available under the [Create Commons Attribution License](https://creativecommons.org/licenses/by/2.5/). Now license free (use it where/when/how you like.)
 
-The version I've written is based strongly on [Perl's sprintf implementation](http://perldoc.perl.org/functions/sprintf.html), allowing argument reordering to help with internationalisation (i18n). Some overly simplistic examples follow, leaving room for obvious improvements like:
+The version I've written is based strongly on [Perl's sprintf implementation](https://perldoc.perl.org/functions/sprintf), allowing argument reordering to help with internationalisation (i18n). Some overly simplistic examples follow, leaving room for obvious improvements like:
 
 1.  letting the user specify their locale as a preference
 2.  set default locale based on visitor demographics
@@ -49,9 +49,9 @@ var formatted = sprintf(
 alert(formatted);
 ```
 
-The Perl documentation has more examples in the "[order of arguments section](http://perldoc.perl.org/functions/sprintf.html#order-of-arguments)". Note: this implementation allows the precision of a number to be set from a specific argument (using e.g. "%.\*3\$f"), which the perldocs (`perldoc -f sprintf`) say hasn't been implemented yet.
+The Perl documentation has more examples in the "[order of arguments section](https://perldoc.perl.org/functions/sprintf#order-of-arguments)". Note: this implementation allows the precision of a number to be set from a specific argument (using e.g. "%.\*3\$f"), which the perldocs (`perldoc -f sprintf`) say hasn't been implemented yet.
 
-I haven't (re)written any documentation for it, but you should be able to use Firebug (or the `javascript:` protocol) to try out `sprintf` on this page, and you can also check out the [test page for sprintf](/tests/sprintf.html) for more input/output samples.
+I haven't (re)written any documentation for it, but you should be able to use Firebug (or the `javascript:` protocol) to try out `sprintf` on this page, and you can also check out the [test page for sprintf](https://hexmen.com/tests/sprintf.html) for more input/output samples.
 
 As usual, writing test-cases uncovered a couple of browser-dependent issues. Safari has some bizarre behaviour with [`Maths.abs(0).toFixed(6)`](<javascript:alert(Math.abs(0).toFixed(6))>) resulting in `"0.0000-0"` instead of `"0.000000"`. Another issue I came across is that [`0.5` rounds to `0` or `1` depending on browser](<javascript:alert((0.5).toFixed())>) (worded differently: numbers are rounded off inconsistently across browsers.)
 

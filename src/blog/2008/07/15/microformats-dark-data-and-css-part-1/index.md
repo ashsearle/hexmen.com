@@ -5,11 +5,11 @@ modified: "2011-01-03T17:20:14.000Z"
 folder: "2008/07/15/microformats-dark-data-and-css-part-1"
 ---
 
-There's was a bit of kerfuffle when the [BBC dropped support for microformats](http://www.bbc.co.uk/blogs/radiolabs/2008/06/removing_microformats_from_bbc.shtml) in their program listings.
+There was a bit of kerfuffle when the [BBC dropped support for microformats](https://www.bbc.co.uk/blogs/radiolabs/2008/06/removing_microformats_from_bbc.shtml) in their program listings.
 
 You can't argue with their reasons: data for [microformats](http://microformats.org/) was being read aloud by screen-readers, popping up as tool-tips, and confusing the hell out of their users.
 
-The microformats community rallied to solve the issue, but [Auntie Beeb rejected all their proposals](http://www.bbc.co.uk/blogs/bbcinternet/2008/07/why_the_bbc_removed_microforma.html); and due to lack of community support, also back-tracked on their own proposal (inserting `data-` prefixed values into the `class` attribute.)
+The microformats community rallied to solve the issue, but [Auntie Beeb rejected all their proposals](https://www.bbc.co.uk/blogs/bbcinternet/2008/07/why_the_bbc_removed_microforma.html); and due to lack of community support, also back-tracked on their own proposal (inserting `data-` prefixed values into the `class` attribute.)
 
 You can't blame them for rejecting the microformats community's proposals. This proposal feels particularly torturous:
 
@@ -34,7 +34,7 @@ You can't blame them for rejecting the microformats community's proposals. This 
 
 That suggestion seems to be the result of a [30 minute brain-fart by microformat's spiritual leader](http://rbach.priv.at/Microformats/IRC/2008-06-24#T161218) and, like the BBC, I find it "complicated" (I doubt that was the first word that sprang to mind though.)
 
-Let's go back to the specs and see what HTML gives us to work with. Considering over one hundred [attributes in HTML 4](http://www.w3.org/TR/REC-html40/index/attributes.html), only a handful apply to the elements we'd want to tag (not just `<abbr>`, but also `<span>`, `<a>`, `<li>` amongst several others.)
+Let's go back to the specs and see what HTML gives us to work with. Considering over one hundred [attributes in HTML 4](https://www.w3.org/TR/REC-html40/index/attributes.html), only a handful apply to the elements we'd want to tag (not just `<abbr>`, but also `<span>`, `<a>`, `<li>` amongst several others.)
 
 The only attributes available to insert microformat data and still pass validation are: `class`, `dir`, `id`, `lang`, `style` and `title`.
 
@@ -44,7 +44,7 @@ We've dismissed all event-handling attributes (`on_whatever_`) as they're suppos
 
 `id` must be unique per page; that's a restriction we can't work with for microformats.
 
-`style` attributes are supposed to hold CSS properties. It _could_ be subverted using a [vendor prefix](http://www.w3.org/TR/CSS21/syndata.html#vendor-keywords) e.g. `style="-mf-dtstart: ..."`. However, you'd buy yourself a place in hell, and you'd never get support from the microformats community.
+`style` attributes are supposed to hold CSS properties. It _could_ be subverted using a [vendor prefix](https://www.w3.org/TR/CSS21/syndata.html#vendor-keywords) e.g. `style="-mf-dtstart: ..."`. However, you'd buy yourself a place in hell, and you'd never get support from the microformats community.
 
 That leaves us with `lang`, `title` and `class`.
 
@@ -52,7 +52,7 @@ That leaves us with `lang`, `title` and `class`.
 
 Good question.
 
-The `lang` attribute indicates what language the _content_ of an element is held in. Language codes were defined in [RFC 1766](http://www.ietf.org/rfc/rfc1766.txt), since replaced by [RFC 3066](http://www.ietf.org/rfc/rfc3066.txt), which has itself been replaced by a due of RFCs: [4646](http://www.ietf.org/rfc/rfc4646.txt) and [4647](http://www.ietf.org/rfc/rfc4647.txt).
+The `lang` attribute indicates what language the _content_ of an element is held in. Language codes were defined in [RFC 1766](https://tools.ietf.org/html/rfc1766), since replaced by [RFC 3066](https://tools.ietf.org/html/rfc3066), which has itself been replaced by a pair of RFCs: [4646](https://tools.ietf.org/html/rfc4646) and [4647](https://tools.ietf.org/html/rfc4647).
 
 Amongst the long lists of language codes, you can find a few options that _should_ let you embed machine-data without it being read-aloud. e.g. the language-code `zxx` indicates there's "no linguistic content", so you might think a screen-reader would simply skip the content:
 

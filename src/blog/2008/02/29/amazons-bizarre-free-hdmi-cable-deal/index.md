@@ -5,13 +5,13 @@ modified: "2011-01-03T17:20:14.000Z"
 folder: "2008/02/29/amazons-bizarre-free-hdmi-cable-deal"
 ---
 
-Sony don't include an HDMI cable with the UK's [PlayStation 3 console](http://ewelike.com/products/145518) (40GB version). But, if you buy it from Amazon, they'll give you an HDMI cable free - if you ask for it.
+Sony don't include an HDMI cable with the UK's PlayStation 3 console (40GB version). But, if you buy it from Amazon, they'll give you an HDMI cable free - if you ask for it.
 
-As Jacob Nielsen (usability expert) said: [Amazon is no longer the role model for e-commerce design](http://www.useit.com/alertbox/20050725.html). I totally agree. I completely missed the opportunity to get a free HDMI cable, and I blame their UI.
+As Jacob Nielsen (usability expert) said: [Amazon is no longer the role model for e-commerce design](https://www.nngroup.com/articles/amazon-no-e-commerce-role-model/). I totally agree. I completely missed the opportunity to get a free HDMI cable, and I blame their UI.
 
 It's my own fault. I've become a bit lazy, and trust Amazon to do the right thing. I buy stuff from them quite regularly, and the only thing I really check is (a) the price, and (b) is it really being sold by Amazon (or one of their market-place sellers.)
 
-I missed seeing the offer completely! As I write, [Amazon are flogging the PS3 for £279](http://www.amazon.co.uk/gp/product/B000WNDP5M?ie=UTF8&tag=ewelike0a-21&linkCode=as2&camp=1634&creative=6738&creativeASIN=B000WNDP5M). Right below it they show an HDMI cable as a "perfect partner" - to buy with the PS3 for £299.98 - i.e. it looks like the cable costs £19.99.
+I missed seeing the offer completely! As I write, Amazon are flogging the PS3 for £279. Right below it they show an HDMI cable as a "perfect partner" - to buy with the PS3 for £299.98 - i.e. it looks like the cable costs £19.99.
 
 I may be a cheap-skate, but I wouldn't spend £20 on a random cable - I'd either buy as cheap a no-name brand as possible (£5 or £10), or double-up and spend £40 on a brand I trust (QED or Ixos.)
 

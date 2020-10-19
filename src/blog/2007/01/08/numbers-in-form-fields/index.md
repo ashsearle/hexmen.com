@@ -82,7 +82,7 @@ var total = subtotal + +form.shipping.value;
 
 I need to be explicit about octal numbers. Although `parseInt` will (by default) parse octal, hexadecimal and base-10; when it comes to operators, octal is ignored. In other words, `"0xff" == 255` is `true`, but `"010" == 8` is `false`. Similarly `+"0xff"` is `255` but `+"010"` is `10`.
 
-Unary `+` has a lot going for it, and if you're using [prototype](http://prototype.conio.net/ "Prototype JavaScript Framework") this should appeal:
+Unary `+` has a lot going for it, and if you're using [prototype](http://api.prototypejs.org/dom/dollar-F/) this should appeal:
 
 ```js
 var total = $F("unitPrice") * $F("quantity") + +$F("shipping");

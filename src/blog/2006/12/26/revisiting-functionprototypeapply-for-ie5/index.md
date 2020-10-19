@@ -39,7 +39,7 @@ Function.prototype.call = function (thisArg) {
 };
 ```
 
-Download: [apply-call.js](/code/apply-call.js)
+Download: [apply-call.js](https://hexmen.com/code/apply-call.js)
 
 ### Validating `apply`'s context and parameters
 
@@ -65,7 +65,7 @@ We've established that `argArray` is either `null`, `undefined`, an array or an 
 
 ### Calling a function with an arbitrary number of parameters
 
-If you google for implementations of `apply` you'll inevitably come across code derived from [youngpup's version](http://boring.youngpup.net/2002/oldblog123). I don't know if he created the hack, but it's the inspiration for my version, so credit where credit's due. The purpose of the hack is to pass a variable number of parameters to a function, without having to consider 1, 2, 3, 4 arguments (etc.) separately. The hack works by building a function-call as a string, then passing the string to `eval`. For example, to pass two parameters, this would be passed to `eval`: `"thisArg.__applyTemp__(argArray[0], argArray[1])"`
+If you google for implementations of `apply` you'll inevitably come across code derived from [youngpup](http://youngpup.net/)'s version. I don't know if he created the hack, but it's the inspiration for my version, so credit where credit's due. The purpose of the hack is to pass a variable number of parameters to a function, without having to consider 1, 2, 3, 4 arguments (etc.) separately. The hack works by building a function-call as a string, then passing the string to `eval`. For example, to pass two parameters, this would be passed to `eval`: `"thisArg.__applyTemp__(argArray[0], argArray[1])"`
 
 ### Error handling and cleaning-up
 

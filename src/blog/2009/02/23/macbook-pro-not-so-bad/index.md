@@ -5,7 +5,7 @@ modified: "2011-01-03T17:20:13.000Z"
 folder: "2009/02/23/macbook-pro-not-so-bad"
 ---
 
-Two years after [moaning about my MacBook Pro](https://hexmen.com/blog/2007/02/i-hate-my-macbook-pro/) I figure it's time for an update:
+Two years after [moaning about my MacBook Pro](https://hexmen.com/blog/2007/02/16/i-hate-my-macbook-pro/) I figure it's time for an update:
 
 It's not so bad...
 
@@ -19,7 +19,7 @@ This was pretty straight forward: download [StartupSound.prefPane](http://www5e.
 
 (definitely a personal preference) I configured a [keyboard layout](http://en.wikipedia.org/wiki/Keyboard_layout) to match UK PC keyboards: backtick (`` ` ``) to the left of 1, hash# and tilde~ next to return, at@ and double-quote" reversed (double-quote via Shift+2) and finally (I think) putting backslash and pipe| to the left of Z) If you want it, you can [download my British PC keyboard layout](https://hexmen.com/uploads/British%20PC.keylayout) (if I remember right, you have to move the file into `/System/Library/Keyboard Layouts/` and may need to restart before you can choose it in System Preferences / International / Input Menu - and if you want a decent icon you'll need the [flag icon](https://hexmen.com/uploads/British%20PC.icns) to bung in the `Keyboard Layouts` folder too.)
 
-There is still one rather annoying aspect of the keyboard layout: it changes back to a Mac layout whenever I use [Opera](http://www.opera.com) and tab into a password field - god knows what that's all about!? I've got used to it now though and can quickly change back with Apple+Space
+There is still one rather annoying aspect of the keyboard layout: it changes back to a Mac layout whenever I use [Opera](https://www.opera.com/) and tab into a password field - god knows what that's all about!? I've got used to it now though and can quickly change back with Apple+Space
 
 ## Better sleep & hibernate
 
@@ -27,7 +27,7 @@ Apple must have distributed a software update including fixes so waking up from 
 
 ## Region-free DVD
 
-Hackers are great. About 8 months on from writing my bitch-post someone pointed out some a [forum thread pointing to new firmware](http://forum.rpc1.org/viewtopic.php?t=43012&start=0). Upgrading the firmware and installing [Region X](http://xvi.rpc1.org/) means I can actually view DVDs I paid for... (Is that a "w00t!" I hear at the back?)
+Hackers are great. About 8 months on from writing my bitch-post someone pointed out some a forum thread pointing to new firmware. Upgrading the firmware and installing [Region X](https://www.macupdate.com/app/mac/13801/region-x) means I can actually view DVDs I paid for... (Is that a "w00t!" I hear at the back?)
 
 It's nice to have been pointed to solutions by readers, but there were a couple of physical issues readers couldn't fix: the position of the drive slot, and the crappy return key.
 
@@ -39,7 +39,7 @@ I need to test-drive the new chicklet keyboard before deciding whether I'd be ha
 2.  unremovable battery. On some days that doesn't sound so bad: the pro (long battery life) outweighs the con (high one-off replacement cost after 3-4 years.) But... I've been through the experience of defective batteries: my original MBP battery got burning hot and buckled over the course of a few months. I'd hate to think what would happen if the battery was wrapped around the PCB and pushing against all edges of a one-piece case.
 3.  non-upgradeable memory. Well, kinda. This is a consequence of a non-removable battery - the option to upgrade from 4 to 8GB looks like it has to be done at the point of ordering, and for a hefty charge. Then again... 4GB of memory ought to be just fine, and (if it really comes down to it) I'm sure there'll be a 32-step upgrade guide to replace the memory modules as soon as a memory supplier begins to sell them.
 
-All in all, I'm pretty happy with my MacBook Pro these days. I get on better with OS X then Windows for a couple of reasons. I prefer Apple subtle nudge reminding you there's a monthly / bi-monthly software update ready to install - compare that to Microsoft's randomly timed "I'm gonna restart your computer in 5 minutes" auto-upgrade annoyance (and yes, I'm well aware of "`net stop wuauserv`" to stop the nagging - I can't remember how many times I've had to type that in.) Plus, the BSD / \*nix nature of OS X allows me to setup a development environment that behaves much closer to our live [CentOS](http://www.centos.org) servers than [Cygwin](http://www.cygwin.com) on Windows does.
+All in all, I'm pretty happy with my MacBook Pro these days. I get on better with OS X then Windows for a couple of reasons. I prefer Apple subtle nudge reminding you there's a monthly / bi-monthly software update ready to install - compare that to Microsoft's randomly timed "I'm gonna restart your computer in 5 minutes" auto-upgrade annoyance (and yes, I'm well aware of "`net stop wuauserv`" to stop the nagging - I can't remember how many times I've had to type that in.) Plus, the BSD / \*nix nature of OS X allows me to setup a development environment that behaves much closer to our live [CentOS](https://www.centos.org/) servers than [Cygwin](https://www.cygwin.com/) on Windows does.
 
 I bought a Mac Mini last summer while rumours of a new revision were reaching fever pitch - I'm glad I didn't wait. The Mini's been an absolute pleasure - running damn-near silently and without issues. But that's wandering off track.
 

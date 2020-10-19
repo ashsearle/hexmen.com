@@ -5,7 +5,7 @@ modified: "2011-01-03T17:20:14.000Z"
 folder: "2008/07/21/microformats-dark-data-and-css-part-2"
 ---
 
-The [first part of this article](https://hexmen.com/blog/2008/07/microformats-dark-data-and-css-part-1/) considered over 100 HTML 4 attributes and came to the conclusion `class` was the only one suitable for storing _machine data_ (i.e. data specifically inserted and intended for machine parsing.)
+The [first part of this article](https://hexmen.com/blog/2008/07/15/microformats-dark-data-and-css-part-1/) considered over 100 HTML 4 attributes and came to the conclusion `class` was the only one suitable for storing _machine data_ (i.e. data specifically inserted and intended for machine parsing.)
 
 In this second part, I'll review several ways to store data in the class attribute, determine the 'best' method, and suggest a CSS implementation change that is (IMO) both trivial and immensely beneficial.
 
@@ -13,7 +13,7 @@ We start by considering the definition of the class attribute, how it's value is
 
 ### Isn't `class` object-oriented?
 
-Some people say `class` has an object-oriented use as though (X)HTML and CSS are object-oriented languages, with inheritance based on `class` values. But that's not how things work: inheritance is based on parent/child relationships, with everything else determined by "[the cascade](http://www.w3.org/TR/REC-CSS2/cascade.html)".
+Some people say `class` has an object-oriented use as though (X)HTML and CSS are object-oriented languages, with inheritance based on `class` values. But that's not how things work: inheritance is based on parent/child relationships, with everything else determined by "[the cascade](https://www.w3.org/TR/CSS2/cascade.html)".
 
 Let me illustrate with a contact directory example I hope isn't too contrived.
 
@@ -102,7 +102,7 @@ As we can't rely on ordering, we need to join the data-type and the data-value t
 
 ### The hyphenated-prefix selector `[attribute|=prefix]`
 
-CSS 2 introduced [several attribute selectors](http://www.w3.org/TR/REC-CSS2/selector.html#attribute-selectors), including one I'm calling the hypehenated-prefix selector.
+CSS 2 introduced [several attribute selectors](https://www.w3.org/TR/CSS2/selector.html#attribute-selectors), including one I'm calling the hypehenated-prefix selector.
 
 The specification admits the primary purpose of this selector is for matching language subcodes; i.e. where CSS rules need only apply to content written in some subset of natural languages:
 
@@ -169,15 +169,15 @@ Sadly, the hyphenated-prefix is overly-restricted. In the following example, onl
 
 The problem is due to the way `[attribute|=prefix]` is defined:
 
-> Match when the element's "att" attribute value is a hyphen-separated list of "words", beginning with "val". _The match always starts at the beginning of the attribute value._ This is primarily intended to allow language subcode matches (e.g., the "lang" attribute in HTML) as described in RFC 1766 (\[RFC1766\]).
+> Match when the element's "att" attribute value is a hyphen-separated list of "words", beginning with "val". _The match always starts at the beginning of the attribute value._ This is primarily intended to allow language subcode matches (e.g., the "lang" attribute in HTML) as described in [RFC 1766](https://tools.ietf.org/html/rfc1766).
 
 (Emphasis added.)
 
 If the definition had instead been made to cater for a white space separated set of hyphenated tokens, we'd be in a much better position for styling and parsing machine-data microformats today.
 
-### \[attribute|=prefix\] implementations
+### `[attribute|=prefix]` implementations
 
-(Surprisingly) the big four browsers (including IE7) all support the hyphenation prefix selector. But, JavaScript library support is lacking, specifically (naming the javascript library I use daily) [jQuery](http://jquery.com/) doesn't handle the hyphenated-prefix selector, although it's a simple patch.
+(Surprisingly) the big four browsers (including IE7) all support the hyphenation prefix selector. But, JavaScript library support is lacking, specifically (naming the javascript library I use daily) [jQuery](https://jquery.com/) doesn't handle the hyphenated-prefix selector, although it's a simple patch.
 
 Assuming JavaScript libraries (or microformat parsers) already implement attribute-selectors, it's a simple matter to support white space separated hyphenated-prefixes. The key regular-expression is:
 
@@ -191,7 +191,7 @@ Assuming your users know what they're doing and are willing to fix their own iss
 new RegExp("(^|\\s)" + prefix + "(-|\\s|$)").test(attribute);
 ```
 
-Or (I think), in [XPath 2.0](http://www.w3.org/TR/xpath-functions/#func-matches):
+Or (I think), in [XPath 2.0](https://www.w3.org/TR/xpath-functions/#func-matches):
 
     //*[matches(@attribute, "(^|\s)prefix(-|\s|$)")]
 
@@ -209,6 +209,6 @@ With a more flexible definition of the that damned attribute selector, I'm sure 
 
 Though I'm sure it doesn't show, I've written and rewritten this article many times, but it doesn't get any more complex:
 
-**If you want to piggy-back machine-data on existing content, use the class attribute. Separate data-types from data-values using a hyphen, and encode the data using something equivalent to JavaScript's `encodeURI`.**
+**If you want to piggy-back machine-data on existing content, use the `class` attribute. Separate data-types from data-values using a hyphen, and encode the data using something equivalent to JavaScript's `encodeURI`.**
 
 That's all folks

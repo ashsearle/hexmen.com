@@ -33,30 +33,30 @@ As a developer, all I do all day long is think and type. That's it, that's all I
 
 I need to concentrate: anything distracting or frustrating can break my concentration and stop me working. This is my main gripe with the Macbook Pro: it has the most annoying keyboard I have ever used.
 
-I'm a 'switcher', trying the Mac after ten years using PCs. I don't want to decode cryptographic symbols on my keyboard, and I don't want to hunt for essential keys. Why did you hide the hash-key Apple? It's nowhere to be seen! (UK keyboards don't have # printed on the '3' key like US keyboards; in fact, they don't have it printed on the keyboard anywhere. The manual is CD-insert thin, and omits any useful keyboard information, leaving the user to search the Internet for the mystical 'Alt + 3' keyboard shortcut. In the age of HTML, why would anyone do something so stupid? On a _unix-based_ operating system, why would you be so stupid? For god's sake: the [Apple home page](http://www.apple.com/) uses the '#' symbol 59 times - try writing _that_ when you've no idea where the bloody hash-key is!
+I'm a 'switcher', trying the Mac after ten years using PCs. I don't want to decode cryptographic symbols on my keyboard, and I don't want to hunt for essential keys. Why did you hide the hash-key Apple? It's nowhere to be seen! (UK keyboards don't have # printed on the '3' key like US keyboards; in fact, they don't have it printed on the keyboard anywhere. The manual is CD-insert thin, and omits any useful keyboard information, leaving the user to search the Internet for the mystical 'Alt + 3' keyboard shortcut. In the age of HTML, why would anyone do something so stupid? On a _unix-based_ operating system, why would you be so stupid? For god's sake: the [Apple home page](https://www.apple.com/) uses the '#' symbol 59 times - try writing _that_ when you've no idea where the bloody hash-key is!
 
 Then there's the cursor keys, stick-thin and dual-function, with labelling that's inconsistent with the rest of the keyboard. There are lots of keys to perform special functions: screen brightness, volume control, number lock etc. In every case, the special-function is labelled on the left, and the normal function is labelled on the right. In every case, _except the cursor keys_. The labels on the cursor keys aren't left/right aligned; they're centrally aligned. And the special-function isn't always on the left: the 'home' key breaks the rule - putting the special-function (home) on the right. The home-key should have it's arrow right-aligned pointing left, and 'home' should be left-aligned on the key. It may not look perfect, but at least it's consistent: without consistency you lose the only visual-cue that tells you that to go 'home' you have to press 'fn'. Not 'shift', not 'alt' or 'option', not 'meta' 'command' or 'apple'; and not 'ctrl'. You need to press the function-key (fn), and only the function-key.
 
-And how about the Mac's option and command keys? How do you recognize them? They'd be the keys labelled 'option' and 'command' wouldn't they? [Don't be silly](http://en.wikipedia.org/wiki/Apple_keyboard "wikipedia article with images of option and command keys"). Why does Apple label UK keyboards with icons while US keyboards are labelled with words? Why does a US keyboard have a second enter-key labelled 'enter', while UK keyboard are labelled with a sideways 'next track' icon? Even the help pages for Apple's [keyboard shortcuts](http://docs.info.apple.com/article.html?artnum=75459) use words. What use are meaningless icons? (Come to think of it, what use is a second enter-key?)
+And how about the Mac's option and command keys? How do you recognize them? They'd be the keys labelled 'option' and 'command' wouldn't they? [Don't be silly](https://en.wikipedia.org/wiki/Apple_Keyboard "wikipedia article with images of option and command keys"). Why does Apple label UK keyboards with icons while US keyboards are labelled with words? Why does a US keyboard have a second enter-key labelled 'enter', while UK keyboard are labelled with a sideways 'next track' icon? Even the help pages for Apple's [keyboard shortcuts](https://support.apple.com/en-gb/HT201236) use words. What use are meaningless icons? (Come to think of it, what use is a second enter-key?)
 
-![rotated-L shaped return-key](/images/articles/macbook-pro-keyboard-euro-return.png) European Macbook Pro
+![rotated-L shaped return-key](https://hexmen.com/images/articles/macbook-pro-keyboard-euro-return.png) European Macbook Pro
 
-Photo: [Sonic Julez](http://www.flickr.com/photos/julesstoop/304301165/)
+Photo: [Sonic Julez](https://www.flickr.com/photos/julesstoop/304301165/)
 
 Finally, we get to the most annoying key; the key that stops me using my 'Pro for any real work: the return key. I use the return key _a lot_ when programming. Much more than when writing - writing only needs a return-press at the end of a paragraph; but programming: that needs a return-press at the end of every _line_. And a 'line' often contains nothing more than a single curly-bracket. So, the return-key is important to me. If it's badly shaped or awkward to press, it becomes frustrating, breaks my concentration, and stops me working.
 
-![brick-shaped return-key](/images/articles/macbook-pro-keyboard-us-return.png) US Macbook Pro
+![brick-shaped return-key](https://hexmen.com/images/articles/macbook-pro-keyboard-us-return.png) US Macbook Pro
 
-Photo: [Justin Roselt](http://flickr.com/photos/justinr/sets/72057594101592631/)
+Photo: Justin Roselt
 
-So why did Apple give burger-fingered Americans a brick-like return-key, and lumber the Europeans with a [Tetris](http://en.wikipedia.org/wiki/Tetris)\-block from Soviet Russia? Look at the surrounding keys; they're the same on US and UK keyboards, just placed differently. Why would Apple do that? I find the return-key to be the measliest stupidest most loathsome key I have ever had the misfortune of using. I've tried to get used to it, but I simply can't. "Plug in another keyboard" you say... Reasonable advice if I used my laptop on a desk. But if I wanted to work at a desk, I'd have bought a Mac mini and saved myself a thousand pounds (~\$2000.) No... I bought a laptop to use on my _lap_, and I use the built-in keyboard. I've learnt my lesson: if the keyboard's wrong, there is no alternative - you have to buy a different laptop.
+So why did Apple give burger-fingered Americans a brick-like return-key, and lumber the Europeans with a [Tetris](https://en.wikipedia.org/wiki/Tetris)\-block from Soviet Russia? Look at the surrounding keys; they're the same on US and UK keyboards, just placed differently. Why would Apple do that? I find the return-key to be the measliest stupidest most loathsome key I have ever had the misfortune of using. I've tried to get used to it, but I simply can't. "Plug in another keyboard" you say... Reasonable advice if I used my laptop on a desk. But if I wanted to work at a desk, I'd have bought a Mac mini and saved myself a thousand pounds (~\$2000.) No... I bought a laptop to use on my _lap_, and I use the built-in keyboard. I've learnt my lesson: if the keyboard's wrong, there is no alternative - you have to buy a different laptop.
 
 ### Dear Apple:
 
 Please make these fixes to your Macbook Pros:
 
 - when headphones are plugged in: _don't make a noise_
-- move the DVD drive to the side: so it's accessible with the _lap_top on our \_lap_
+- move the DVD drive to the side: so it's accessible with the *lap*top on our _lap_
 - use an unlockable DVD-drive (you may not be able to supply multi-region or region-free drives,; but you can use drives with the capability to be unlocked)
 - use _English_ on _English_ keyboards
 - change the shape of the return key
@@ -69,8 +69,8 @@ I'm not buying another 'Pro until they do.
 
 Allows you to set the volume level (or mute) the startup-sound
 
-[Deep Sleep](http://www.apple.com/downloads/dashboard/status/deepsleep.html)
+[Deep Sleep](http://deepsleep.free.fr/)
 
 (So far) more reliable than standard sleep, and doesn't use any battery power while sleeping. Basically, the equivalent of 'Hibernate' on a PC
 
-Just as I was about to try remapping my keyboard with [Ukelele](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=ukelele), I noticed the International option in System Preferences... Choosing the "U.S." option in "Input Menu" and selecting "Use one input source in all documents" I now have Shift-3 producing a '#' character instead of a '£'. My at-symbol (@) and double-quote (") are still reversed (compared to PC), but I can live with that for now...
+Just as I was about to try remapping my keyboard with [Ukelele](https://software.sil.org/ukelele/), I noticed the International option in System Preferences... Choosing the "U.S." option in "Input Menu" and selecting "Use one input source in all documents" I now have Shift-3 producing a '#' character instead of a '£'. My at-symbol (@) and double-quote (") are still reversed (compared to PC), but I can live with that for now...

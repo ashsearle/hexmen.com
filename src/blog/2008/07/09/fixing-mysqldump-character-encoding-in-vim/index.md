@@ -7,7 +7,7 @@ folder: "2008/07/09/fixing-mysqldump-character-encoding-in-vim"
 
 If you find yourself in a position where your `mysqldump` backup/restore process isn't working, it's worth checking for character-encoding issues - and the best way to do this is often to look at the SQL in your backup file.
 
-To tell [vim](http://www.vim.org/) you prefer working in unicode, you may have added some settings to your `.vimrc`:
+To tell [vim](https://www.vim.org/) you prefer working in unicode, you may have added some settings to your `.vimrc`:
 
 `set encoding=utf-8 fenc=utf-8`
 

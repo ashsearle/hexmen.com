@@ -5,17 +5,17 @@ modified: "2011-01-03T17:20:14.000Z"
 folder: "2008/08/22/getting-git-to-work-on-os-x-tiger"
 ---
 
-If you haven't heard of [git](<http://en.wikipedia.org/wiki/Git_(software)>) yet, it's quickly becoming the preferred version-control system for tons of open-source projects, including the twin suns of [ruby on rails](http://github.com/rails/rails/tree/master) and [prototype](http://github.com/sstephenson/prototype/tree/master).
+If you haven't heard of [git](https://en.wikipedia.org/wiki/Git) yet, it's quickly becoming the preferred version-control system for tons of open-source projects, including the twin suns of [ruby on rails](https://github.com/rails/rails) and [prototype](https://github.com/prototypejs/prototype).
 
-In fact, if you keep your eye on the [github blog](http://github.com/blog) you'll see a steady stream of well-known projects moving over to git, as diverse as the [Blueprint CSS framework](http://github.com/joshuaclayton/blueprint-css/tree/master) and the [Haskell compiler](http://github.com/ghc-hq/ghc/tree/master).
+In fact, if you keep your eye on the [github blog](https://github.blog/) you'll see a steady stream of well-known projects moving over to git, as diverse as the [Blueprint CSS framework](https://github.com/joshuaclayton/blueprint-css) and the [Haskell compiler](https://gitlab.haskell.org/ghc/ghc).
 
-Basically, if _git_ was a stock-market commodity, analysts would be issuing **strong buy** recommendations left, right and centre. Git's [tipping-point](http://en.wikipedia.org/wiki/The_Tipping_Point) has arrived.
+Basically, if _git_ was a stock-market commodity, analysts would be issuing **strong buy** recommendations left, right and centre. Git's [tipping-point](https://en.wikipedia.org/wiki/The_Tipping_Point) has arrived.
 
 ### How to play
 
 _If you've arrived here via search-engine, it's probably because you're trying to work around errors like **Can't locate Error.pm** or **Can't locate SVN/Core.pm**. Read on..._
 
-I already had macports installed, but if you haven't, follow the [macports install instructions](http://www.macports.org/install.php) - we'll be using macports to download and install git as it's supposed to be simpler than building from source.
+I already had macports installed, but if you haven't, follow the [macports install instructions](https://www.macports.org/install.php) - we'll be using macports to download and install git as it's supposed to be simpler than building from source.
 
 If you've had macports installed a while, make sure it's up to date:
 
@@ -53,7 +53,7 @@ mkdir myproject; cd myproject;
 # fatal: Not a git repository
 git svn
 # If that's OK... clone a repository:
-git svn clone http://example.com/svn/project/trunk
+git svn clone https://example.com/svn/project/trunk
 ```
 
 ### Can't locate Error.pm
@@ -76,7 +76,7 @@ Cross your fingers, and try again:
 
 ```bash
 PATH=/opt/local/bin:$PATH
-git svn clone http://example.com/svn/project/trunk
+git svn clone https://example.com/svn/project/trunk
 ```
 
 If things are working, git will spend a while cloning the subversion repository by pulling out every single revision so you can have a complete set of revisions (including deltas), ready for you to refer to with lightning-speed regardless of internet connectivity. Which is nice.

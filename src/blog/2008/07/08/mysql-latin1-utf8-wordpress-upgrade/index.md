@@ -5,7 +5,7 @@ modified: "2011-01-03T17:20:14.000Z"
 folder: "2008/07/08/mysql-latin1-utf8-wordpress-upgrade"
 ---
 
-Spurred on by [mass hacking](http://www.techcrunch.com/2008/06/11/my-blog-was-hacked-is-yours-next-huge-wordpress-security-issues/), I've updated my old (version 2.0.3) Wordpress install to something a little newer.
+Spurred on by [mass hacking](https://techcrunch.com/2008/06/11/my-blog-was-hacked-is-yours-next-huge-wordpress-security-issues/), I've updated my old (version 2.0.3) Wordpress install to something a little newer.
 
 I decided to err on the side of caution and upgrade a _copy_ of the live DB first - and I'm glad I did. I saw lots of problems with accents and symbols getting munged in the upgrade - well, that's what I thought.
 
@@ -15,7 +15,10 @@ After a bit of sleuthing, I found the output from `mysqldump` wasn't valid. The 
 
 My MySQL default settings are:
 
-`[client] default-character-set=utf8`
+```
+[client]
+default-character-set=utf8
+```
 
 Because we're pulling latin1 data over a utf-8 connection, MySQL starts doing character-set conversions, and screws up a bunch of text that it _thinks_ is latin1, but in reality is actually already in utf-8.
 

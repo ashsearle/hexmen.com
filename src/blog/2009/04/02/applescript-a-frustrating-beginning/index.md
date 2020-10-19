@@ -9,7 +9,7 @@ Academia and professional work has exposed me to a few different programming par
 
 I think the root cause is the documentation. A quick read of [wikipedia's page on AppleScript](http://en.wikipedia.org/wiki/AppleScript) shows you you're dealing with a _natural language_. AppleScript statements read like english sentences with padding words like "the" being optional, for example: `tell application "Finder" to say the name of the front Finder window as string`.
 
-Maybe I'm being mislead because I'm holding onto [Tiger](http://www.apple.com/support/tiger/) while waiting for [Snow Leopard](http://www.apple.com/macosx/snowleopard/) - I can't see why you'd need to use `as string` at the end of the example given? A Finder window's name property is documented as unicode text and yet I need to explicitly convert it to a string (or equivalently and for no good reason `as text` works too). It's rubbish!
+Maybe I'm being mislead because I'm holding onto Tiger while waiting for Snow Leopard - I can't see why you'd need to use `as string` at the end of the example given? A Finder window's name property is documented as unicode text and yet I need to explicitly convert it to a string (or equivalently and for no good reason `as text` works too). It's rubbish!
 
 Accesing properties is a little odd too; I'm not even sure whether AppleScripts trying to be object-oreiented or not. We can rewrite the example to use a posessive `'s` instead of the `of` operator. e.g. `tell app "Finder" to say front Finder window's name as text` - which is nice. But sometimes it works, and sometimes it doesn't. (note: I arbitrarily abbreviated `application` to `app`, but I've no idea where to find a full list of supported abbreviations...!)
 

@@ -53,7 +53,7 @@ p.error {
 
 _Note: although "`p.error !important`" isn't a valid selector, I hope the intent is clear._
 
-Using the CSS 2.1 [definition of specificity](http://www.w3.org/TR/CSS21/cascade.html#specificity), an inline-style would have the highest specificity (`1,0,0,0`), while `p.error` has a specificity of `0,0,1,1` (in order: `0` for not being inline, `0` IDs, 1 class, 1 element name.) But, `!important` rules override inline-styles, and `!important` inline-styles override everything; so wouldn't it make sense to give `!important` rulesets a higher specificity?
+Using the CSS 2.1 [definition of specificity](https://www.w3.org/TR/CSS21/cascade.html#specificity), an inline-style would have the highest specificity (`1,0,0,0`), while `p.error` has a specificity of `0,0,1,1` (in order: `0` for not being inline, `0` IDs, 1 class, 1 element name.) But, `!important` rules override inline-styles, and `!important` inline-styles override everything; so wouldn't it make sense to give `!important` rulesets a higher specificity?
 
 Here's the instruction used to calculate the first number in the specificity of a selector:
 

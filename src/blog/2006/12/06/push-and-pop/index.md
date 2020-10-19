@@ -35,11 +35,11 @@ Array.prototype.pop = function () {
 };
 ```
 
-Download: [push-pop.js](/code/push-pop.js)
+Download: [push-pop.js](https://hexmen.com/code/push-pop.js)
 
 ### Testing
 
-Always up for a challenge, I've tried to produce a bug-free implementation that conforms to the specification. You can see how it fares on my [push and pop test page](https://hexmen.com/tests/pushpop.html) (fixed link). The test page allows you to compare several library implementations to the browser's built-in implementation, and mine. There are about thirty tests in all, and you should find that even the browser's implementations fail a couple of tests (some fail substantially more.)
+Always up for a challenge, I've tried to produce a bug-free implementation that conforms to the specification. You can see how it fares on my [push and pop test page](https://hexmen.com/tests/pushpop.html). The test page allows you to compare several library implementations to the browser's built-in implementation, and mine. There are about thirty tests in all, and you should find that even the browser's implementations fail a couple of tests (some fail substantially more.)
 
 So, why the high failure rate? Simple: most browsers haven't implemented arrays correctly; their understanding of an _array index_ and `length` is wrong. From the specification (section 15.4):
 
@@ -89,14 +89,14 @@ And the specification for `pop`:
 >
 > _NOTE_ _The `pop` function is intentionally generic; it does not require that its **this** value be an Array object. Therefore it can be transferred to other kinds of objects for use as a method. Whether the `pop` function can be applied successfully to a host object is implementation-dependent._
 
-The notes in both specifications are very important - they mean that each method must be portable, able to work in isolation - no dependence on other Array methods or properties. Implementation should not rely on side-effects of manipulating a `length` property, nor should they use other array methods like `splice` (as seen in an unusual implementation of push and pop in [Douglas Crockford's Remedial JavaScript](http://javascript.crockford.com/remedial.html)).
+The notes in both specifications are very important - they mean that each method must be portable, able to work in isolation - no dependence on other Array methods or properties. Implementation should not rely on side-effects of manipulating a `length` property, nor should they use other array methods like `splice`.
 
 It's this requirement for independence that causes Internet Explorer to fail a whole slew of tests, and puts it at the back of the pack in terms of standards compliance.
 
 ### The `>>>` operator
 
-Working through the `push` and `pop` specifications, both methods need to use type-conversion to convert arbitrary (possibly undefined) objects to unsigned 32-bit integers. This can be done using the unsigned right-shift operator (`>>>`), and this reveals another - trivial - bug: IE5 and Safari fail to ignore particular white-space characters when converting strings to unsigned 32-bit integers. It's a minor bug, and I hope Safari can be easily fixed by the [WebKit](http://webkit.org/) guys - Microsoft fixed this particular Internet Explorer bug when they released IE5.5. (`testToUint32`)
+Working through the `push` and `pop` specifications, both methods need to use type-conversion to convert arbitrary (possibly undefined) objects to unsigned 32-bit integers. This can be done using the unsigned right-shift operator (`>>>`), and this reveals another - trivial - bug: IE5 and Safari fail to ignore particular white-space characters when converting strings to unsigned 32-bit integers. It's a minor bug, and I hope Safari can be easily fixed by the [WebKit](https://webkit.org/) guys - Microsoft fixed this particular Internet Explorer bug when they released IE5.5. (`testToUint32`)
 
 Steps 3 - 6 of `push` are a little ambiguous, and the specification probably should have stated that repeated increments to `n` must be done using 32-bit unsigned integer arithmetic - it's kind-of implicit as `n` is assigned the result of the internal ToUint32 operator. Using 32-bit arithmetic leads to some strange edge-cases: when `n` overflows from 2<sup>32</sup>\-1 to 0, `push` will have set a property called `4294967295`. This is strange, as `429496795` is _not_ an _array index_ (as discussed above), but at least it means the property-value will still be available after the inevitable array-truncation (when `length` is set to some small value in step 8.)
 
-Although the specification leaves room for the occasional bit of ambiguity, and prescribes some strange behaviour as a consequence, I think it's well put together. On-screen, it's not so easy to work with, but Mozilla have produced an [improved PDF](http://www.mozilla.org/js/language/E262-3.pdf "Mozilla's improved ECMAScript Language Specification PDF") which includes lots of bookmarks to help navigate through the document.
+Although the specification leaves room for the occasional bit of ambiguity, and prescribes some strange behaviour as a consequence, I think it's well put together. On-screen, it's not so easy to work with, but Mozilla have produced an [improved PDF](https://www-archive.mozilla.org/js/language/E262-3.pdf "Mozilla's improved ECMAScript Language Specification PDF") which includes lots of bookmarks to help navigate through the document.

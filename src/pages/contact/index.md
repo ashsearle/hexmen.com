@@ -3,8 +3,6 @@ title: "Contact Hexmen"
 date: "2020-10-18"
 ---
 
-# Contact us
-
 <address>
 Hexmen Limited<br>
 3 Isis Avenue<br>

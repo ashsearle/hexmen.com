@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 import moment from "moment";
-import logoDataURI from "./hexmen-logo-2020-10-13.svg";
+import logoDataURI from "../components/hexmen-logo-2020-10-13.svg";
 import "./style.css";
 
 export default function (props) {
@@ -10,7 +10,7 @@ export default function (props) {
     <>
       <header className="branding">
         <h1 style={{ display: "flex", alignItems: "center", fontSize: "2rem", lineHeight: 1.2 }}>
-          <img style={{ height: "1em" }} src={logoDataURI} />
+          <img style={{ height: "1em" }} src={logoDataURI} alt="" />
           <span>Hexmen</span>
         </h1>
       </header>
@@ -34,11 +34,7 @@ export default function (props) {
           ))}
         </section>
       </main>
-      <nav id="site-footer">
-        <Link to="/about/">About</Link>
-        <Link to="/contact/">Contact</Link>
-        {/* <Link to="/blog/">Blog</Link> */}
-      </nav>
+      <nav id="site-footer">&copy; 2020 Hexmen Limited</nav>
     </>
   );
 }

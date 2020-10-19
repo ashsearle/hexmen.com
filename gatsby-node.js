@@ -50,7 +50,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `);
 
-  const defaultTemplate = path.resolve("src/templates/default.js");
+  const blogPostTemplate = path.resolve("src/templates/blog-post.js");
   blogPostsResult.data.allMarkdownRemark.nodes.forEach((markdownNode, index, posts) => {
     const { slug } = markdownNode.fields;
     const previous = posts[index + 1] || null;
@@ -58,7 +58,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     createPage({
       path: slug,
-      component: defaultTemplate,
+      component: blogPostTemplate,
       context: { slug, next, previous },
     });
   });
@@ -78,7 +78,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `);
 
-  // const defaultTemplate = path.resolve("src/templates/default.js");
+  const defaultTemplate = path.resolve("src/templates/default.js");
   pagesResult.data.allMarkdownRemark.nodes.forEach((markdownNode) => {
     const { slug } = markdownNode.fields;
     createPage({

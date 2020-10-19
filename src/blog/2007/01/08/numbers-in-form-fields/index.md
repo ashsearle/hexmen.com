@@ -19,10 +19,12 @@ Once you've decided on and coded-up your server-side validation, it's time to th
 
 We need an example to work with. I'm feeling unimaginative, so I'm going to use the stock order-form example. Let's suppose we have a quantity field that (for arbitrary business reasons) we will only accept with an integer from 0 - 100. One naïve approach to validation may be:
 
-    var quantity = document.orderForm.quantity.value;
-    if (quantity < 0 || quantity > 100) {
-      // inform user of invalid input
-    }
+```js
+var quantity = document.orderForm.quantity.value;
+if (quantity < 0 || quantity > 100) {
+  // inform user of invalid input
+}
+```
 
 Remember, form-field values are always strings, so the code above is relying on automatic type-conversion from strings to numbers using the `<` and `>` operators. Unfortunately, if the user doesn't input anything (`quantity === ""`), this would be treated exactly the same as if they'd entered `0`; and the quantity would pass our input validation.
 
@@ -32,12 +34,14 @@ I just mentioned that the validation would pass for an empty-string; in fact, va
 
 So, we don't want white-space to be treated as `0`. Fortunately (for now), `parseInt` (and `parseFloat`) will return `NaN` for white-space input. We could try to improve our code like this:
 
-    var quantity = parseInt(document.orderForm.quantity.value);
-    if (isNaN(quantity) || quantity < 0 || quantity > 100) {
-      // inform user of invalid input
-    } else {
-      // assume everything's hunky-dory?
-    }
+```js
+var quantity = parseInt(document.orderForm.quantity.value);
+if (isNaN(quantity) || quantity < 0 || quantity > 100) {
+  // inform user of invalid input
+} else {
+  // assume everything's hunky-dory?
+}
+```
 
 But, oh dear lord, what a can-of-worms we've just opened: `parseInt` accepts numbers in octal and hexadecimal as well as base-10, and it's unlikely that we want to send octal or hexadecimal numbers to our server. The sensible thing to do would seem to be to specify that we want to parse base-10 numbers using `parseInt(quantity, 10)`.
 
@@ -53,12 +57,14 @@ Clearly, `parseInt` is not enough on it's own.
 
 We're talking about a `quantity` field, where we want a non-negative integer. A simple-regular expression to check for a sequence of decimal digits is: `/\d+/`. That still doesn't help us avoid any trailing characters, so we need to pin it down using the `^` and `$` markers. Remembering that the user can't see white-space, we'll show some tolerance by allowing leading and trailing white-space round the character (usually, you'd _trim_ the field before validating, but I'm just adding some optional white-space to the regular-expression for now.)
 
-    var quantity = document.orderForm.quantity.value;
-    if (!/^\\s*\\d+\\s*$/.test(quantity) || quantity < 0 || quantity > 100) {
-      // inform user of invalid input
-    } else {
-      // do something with quantity?
-    }
+```js
+var quantity = document.orderForm.quantity.value;
+if (!/^\\s*\\d+\\s*$/.test(quantity) || quantity < 0 || quantity > 100) {
+  // inform user of invalid input
+} else {
+  // do something with quantity?
+}
+```
 
 We're pretty happy that quantity has been entered in the right format, and we've used some implicit JavaScript type-conversion to check it's in the right range (0 - 100.) But surely if we want to do some calculations on it, then we're going to have to use `parseInt` or some other method of converting strings to numbers?
 
@@ -66,17 +72,21 @@ We're pretty happy that quantity has been entered in the right format, and we've
 
 Forget `parseInt`. If you know that a variable only contains digits (optionally wrapped in white-space) you can convert it to a number using a single `+`. Let's assume we have a couple of hidden fields: unitPrice and shipping. We can assume these hidden fields contain numbers, and we know that the multiplication operator '`*`' will do automatic string-to-number conversion for us. But the binary '`+`' operator doesn't (i.e. `4 + "5"` equals `"45"` not `9`.) Here's unary `+` in action:
 
-    var form = document.orderForm;
-    var quantity = form.quantity.value;
-    ...validation omitted...
-    var subtotal = form.unitPrice.value * quantity;
-    var total = subtotal + +form.shipping.value;
+```js
+var form = document.orderForm;
+var quantity = form.quantity.value;
+/* ...validation omitted... */
+var subtotal = form.unitPrice.value * quantity;
+var total = subtotal + +form.shipping.value;
+```
 
 I need to be explicit about octal numbers. Although `parseInt` will (by default) parse octal, hexadecimal and base-10; when it comes to operators, octal is ignored. In other words, `"0xff" == 255` is `true`, but `"010" == 8` is `false`. Similarly `+"0xff"` is `255` but `+"010"` is `10`.
 
 Unary `+` has a lot going for it, and if you're using [prototype](http://prototype.conio.net/ "Prototype JavaScript Framework") this should appeal:
 
-    var total = ($F('unitPrice') * $F('quantity')) + +$F('shipping');
+```js
+var total = $F("unitPrice") * $F("quantity") + +$F("shipping");
+```
 
 _(though I'll never understand why they chose to use `$F` instead of `$V`. 'F' for field, 'V' for value, surely? But I digress)_
 

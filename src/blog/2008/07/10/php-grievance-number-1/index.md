@@ -22,16 +22,20 @@ First, the warnings.
 
 The language designers must have made a choice between checked vs. unchecked array access: should this throw a warning, or shouldn't it:
 
-    $titles = array("Philosopher's Stone", "Chamber of Secrets");
-    // accessing an element that doesn't exist:
-    $title = $titles[2];
+```php
+$titles = array("Philosopher's Stone", "Chamber of Secrets");
+// accessing an element that doesn't exist:
+$title = $titles[2];
+```
 
 They decided it should - it's just a "Notice"; easily hidden with appropriate `php.ini` settings. I can live with that; it's been a while, but doesn't Java throws a wobbly when you fall off the end of an array too?
 
 My grievance is here, when you make a typo:
 
-    $titles = array("Philosopher's Stone", "Chamber of Secrets");
-    $tiltes[2] = "Prisoner of Azkaban";
+```php
+$titles = array("Philosopher's Stone", "Chamber of Secrets");
+$tiltes[2] = "Prisoner of Azkaban";
+```
 
 No errors, no warnings, no notices. Idiot-fingers just created a new array `$tiltes`, assigning a vitally important piece of information to a variable that shouldn't exist!
 
@@ -39,12 +43,16 @@ That's a bit stupid, isn't it? Bit of a design-decision inconsistency?
 
 Onto array access: it would be nice - and when I say nice, I mean _obvious, natural and expected_ - to write:
 
-    $head = $dom->get_elements_by_tagname('head')[0];
+```php
+$head = $dom->get_elements_by_tagname('head')[0];
+```
 
 PHP's `getElementsByTagName` returns an `array`; we're expecting a single `<head>` element, so try to skip the bullshit and access it straight-off. But we can't, because PHP's compiler can't handle array-access on function return-values.
 
 Object access? Sure, no problem. Calling a method of an object in an array inside another array is no problem:
 
-`$book['chapter']['title']->display('html')`
+```php
+$book['chapter']['title']->display('html');
+```
 
 But if you want to access an array element returned from a function, choose a different language.

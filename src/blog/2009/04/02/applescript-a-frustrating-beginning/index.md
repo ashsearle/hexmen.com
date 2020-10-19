@@ -27,13 +27,17 @@ To end on a semi-useful note, here are some very basic things I've discovered wh
 
 Determine AppleScript version number
 
-`$ osascript -e "AppleScript's version"`
+```bash
+osascript -e "AppleScript's version"
+```
 
 Show current track name from iTunes
 
 (Note: I'm coming round to the idea that using `$'...'` is the best way of wrapping the applescript on a bash command-line - it allows you to backslash escape single-quotes and keep your double-quotes handy for literal strings.)
 
-`$ osascript -e $'tell application "iTunes" to get current track's name'`
+```bash
+osascript -e $'tell application "iTunes" to get current track\'s name'
+```
 
 (you'd think there'd be more...)
 

@@ -13,32 +13,24 @@ The microformats community rallied to solve the issue, but [Auntie Beeb rejected
 
 You can't blame them for rejecting the microformats community's proposals. This proposal feels particularly torturous:
 
-    <p>
-      To be held on
-      <span class="dtstart dtend">
-        <abbr class="value" title="1998-03-12">
-          12 March 1998
-        </abbr>
-      </span>
-      from
-      <span class="dtstart">
-        <abbr class="value" title="08:30">
-          8:30am
-        </abbr>
-        <abbr class="value" title="-0500">
-          EST
-        </abbr>
-      </span>
-      until
-      <span class="dtend">
-        <abbr class="value" title="09:30">
-          9:30am
-        </abbr>
-        <abbr class="value" title="-0500">
-          EST
-        </abbr>
-      </span>
-    </p>
+```html
+<p>
+  To be held on
+  <span class="dtstart dtend">
+    <abbr class="value" title="1998-03-12">12 March 1998</abbr>
+  </span>
+  from
+  <span class="dtstart">
+    <abbr class="value" title="08:30">8:30am</abbr>
+    <abbr class="value" title="-0500">EST</abbr>
+  </span>
+  until
+  <span class="dtend">
+    <abbr class="value" title="09:30">9:30am</abbr>
+    <abbr class="value" title="-0500">EST</abbr>
+  </span>
+</p>
+```
 
 That suggestion seems to be the result of a [30 minute brain-fart by microformat's spiritual leader](http://rbach.priv.at/Microformats/IRC/2008-06-24#T161218) and, like the BBC, I find it "complicated" (I doubt that was the first word that sprang to mind though.)
 
@@ -64,14 +56,16 @@ The `lang` attribute indicates what language the _content_ of an element is held
 
 Amongst the long lists of language codes, you can find a few options that _should_ let you embed machine-data without it being read-aloud. e.g. the language-code `zxx` indicates there's "no linguistic content", so you might think a screen-reader would simply skip the content:
 
-    <p>
-      To be held on 12 March 1998
-      <span class="dtstart dtend" lang="zxx">1998-03-12</span>
-      from 8:30am EST
-      <span class="dtstart" lang="zxx">08:30-0500</span>
-      until 9:30am EST
-      <span class="dtend" lang="zxx">09:30-0500</span>
-    </p>
+```html
+<p>
+  To be held on 12 March 1998
+  <span class="dtstart dtend" lang="zxx">1998-03-12</span>
+  from 8:30am EST
+  <span class="dtstart" lang="zxx">08:30-0500</span>
+  until 9:30am EST
+  <span class="dtend" lang="zxx">09:30-0500</span>
+</p>
+```
 
 Sadly, a quick trial using accessibility features on a mac reveals the content it still read aloud. I suspect the other possible language codes - `art` for "artificial languages", and the `x-` prefix for "private use" - would suffer the same fate.
 

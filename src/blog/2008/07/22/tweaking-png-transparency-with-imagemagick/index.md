@@ -15,6 +15,8 @@ Searching Google using "transparent" and "opacity" drew a blank - all I got was 
 
 The word I was missing was "alpha", and the magic incantation for changing the opacity of the whole image is:
 
-    convert input.png -channel Alpha -evaluate Divide 2 output.png
+```bash
+convert input.png -channel Alpha -evaluate Divide 2 output.png
+```
 
 In my case, I wanted to set the PNG to be 50% transparent (hence "Divide 2".) Of course, you can change that number to whatever works for you.

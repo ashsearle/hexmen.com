@@ -22,3 +22,5 @@ I'm looking forward to reading about [Apple's new Macbooks](http://www.engadget.
 Oh well... I guess I'll just have to wait.
 
 Update: I've just discovered [Google's things-to-do page](http://www.google.co.uk/thingstodo) (UK only?) Amongst other things, it explains how to get the _current_ time for any location: simply prefix the place-name with "time " - e.g. [time london](http://www.google.com/search?q=time+london). That may be helpful if you know your geography? Personally, I've no idea which cities are in PST, and I'd only be guessing that maybe New York is in EST? (Google says EDT for New York - is it daylight savings time at the moment?)
+
+Update #2: Google started supporting ["10AM PST IN GMT"](http://www.google.co.uk/search?q=10am+pst+in+gmt&btnG=Search) style queries some time after this article was written.

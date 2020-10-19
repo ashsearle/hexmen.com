@@ -21,12 +21,21 @@ Because we're pulling latin1 data over a utf-8 connection, MySQL starts doing ch
 
 The fix for the backup process was to override my default settings with latin1:
 
-`$ mysqldump --default-character-set=latin1 --opt -h db.example.com -u user -ppassword schema > db-backup-latin1-20080707.sql`
+```bash
+mysqldump --default-character-set=latin1 --opt -h db.example.com -u user -ppassword schema > db-backup-latin1-20080707.sql
+```
 
 That worked fine, and the next step was reloading it into the DB as utf-8. This required a little bit of string replacement using a command-line utility bundled with MySQL. If you're going to do this yourself, watch what you type: I somehow typed in "lastin1" halfway through and lost an hour or so trying to figure out what went wrong. Anyhow, here's the command-line:
 
-`$ replace "CHARSET=latin1" "CHARSET=utf8" "SET NAMES latin1" "SET NAMES utf8" < db-backup-latin1-20080707.sql > db-backup-utf8-20080707.sql`
+```bash
+sed \
+  -e 's/CHARSET=latin1/CHARSET=utf8/g' \
+  -e 's/SET NAMES latin1/SET NAMES utf8/g' \
+  < db-backup-latin1-20080707.sql > db-backup-utf8-20080707.sql
+```
 
 You should now be able to blat / restore / overwrite your DB and ensure all tables are in the appropriate character set, ready for a smooth wordpress upgrade.
 
-`$ mysql --opt -h db.example.com -u user -ppassword schema < db-backup-utf8-20080707.sql`
+```bash
+mysql --opt -h db.example.com -u user -ppassword schema < db-backup-utf8-20080707.sql
+```

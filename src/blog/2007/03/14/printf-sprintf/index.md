@@ -17,27 +17,37 @@ The version I've written is based strongly on [Perl's sprintf implementation](ht
 
 On with the examples:
 
-    var locale = 'es';
-    var messages = {
-        'en': 'I am %d years and %d months old.',
-        'es': 'Tengo %2$d meses y %1$d años.'
-    };
-    var message = sprintf(messages[locale], 31, 7);
+```js
+var locale = "es";
+var messages = {
+  en: "I am %d years and %d months old.",
+  es: "Tengo %2$d meses y %1$d años.",
+};
+var message = sprintf(messages[locale], 31, 7);
+```
 
 You could also use it for
 
-    var date = new Date;
-    var dateFormats = [
-        /* ISO-8601: */ '%04d-%02d-%02d %02d:%02d:%02d',
-        /* British:  */ '%3$02d/%2$02d/%1$02d',
-        /* U.S.:     */ '%2$02d/%3$02d/%1$02d'
-    ];
-    // for example only: choose random date format
-    var dateFormat = dateFormats[3 * Math.random() >>> 0];
-    var formatted = sprintf(dateFormat,
-        date.getFullYear(), date.getMonth() + 1, date.getDate(),
-        date.getHours(), date.getMinutes(), date.getSeconds());
-    alert(formatted);
+```js
+var date = new Date();
+var dateFormats = [
+  /* ISO-8601: */ "%04d-%02d-%02d %02d:%02d:%02d",
+  /* British:  */ "%3$02d/%2$02d/%1$02d",
+  /* U.S.:     */ "%2$02d/%3$02d/%1$02d",
+];
+// for example only: choose random date format
+var dateFormat = dateFormats[(3 * Math.random()) >>> 0];
+var formatted = sprintf(
+  dateFormat,
+  date.getFullYear(),
+  date.getMonth() + 1,
+  date.getDate(),
+  date.getHours(),
+  date.getMinutes(),
+  date.getSeconds()
+);
+alert(formatted);
+```
 
 The Perl documentation has more examples in the "[order of arguments section](http://perldoc.perl.org/functions/sprintf.html#order-of-arguments)". Note: this implementation allows the precision of a number to be set from a specific argument (using e.g. "%.\*3\$f"), which the perldocs (`perldoc -f sprintf`) say hasn't been implemented yet.
 

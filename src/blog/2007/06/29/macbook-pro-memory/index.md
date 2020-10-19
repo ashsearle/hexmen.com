@@ -13,57 +13,20 @@ It's your choice. Installing memory is a piece of cake: pop the battery out and 
 
 So, the Maths: (with an 'S', because I'm English.)
 
-UK Price
-
-US Price
-
-Apple Upgrade Charge (2GB to 4GB)
-
-£480
-
-\$750
-
-4GB memory (from Crucial)
-
-[£180](http://www.crucial.com/uk/store/listparts.aspx?model=MacBook+Pro+2%2E4GHz+Intel+Core+2+Duo+%2817%2Dinch%29)
-
-[\$279](http://www.crucial.com/store/listparts.aspx?model=MacBook+Pro+2%2E4GHz+Intel+Core+2+Duo+%2817%2Dinch%29)
-
-Saving
-
-**£300**
-
-**\$471**
+| &nbsp;                            |                                                                                                           UK Price |                                                                                                         US Price |
+| :-------------------------------- | -----------------------------------------------------------------------------------------------------------------: | ---------------------------------------------------------------------------------------------------------------: |
+| Apple Upgrade Charge (2GB to 4GB) |                                                                                                               £480 |                                                                                                            \$750 |
+| 4GB memory (from Crucial)         | [£180](http://www.crucial.com/uk/store/listparts.aspx?model=MacBook+Pro+2%2E4GHz+Intel+Core+2+Duo+%2817%2Dinch%29) | [\$279](http://www.crucial.com/store/listparts.aspx?model=MacBook+Pro+2%2E4GHz+Intel+Core+2+Duo+%2817%2Dinch%29) |
+| Saving                            |                                                                                                           **£300** |                                                                                                        **\$471** |
 
 That's some juicy saving... Let's buy some iPods:
 
-UK Price
-
-US Price
-
-Apple iPod Video 80GB
-
-£239
-
-\$350
-
-Apple iPod Shuffle
-
-£49
-
-\$79
-
-Total
-
-**£288**
-
-**\$429**
-
-Remaining Savings
-
-£12
-
-\$42
+| &nbsp;                | UK Price |  US Price |
+| :-------------------- | -------: | --------: |
+| Apple iPod Video 80GB |     £239 |     \$350 |
+| Apple iPod Shuffle    |      £49 |      \$79 |
+| Total                 | **£288** | **\$429** |
+| Remaining Savings     |      £12 |      \$42 |
 
 Even after buying two iPods, you still have money left from your savings to buy drinks to celebrate.
 

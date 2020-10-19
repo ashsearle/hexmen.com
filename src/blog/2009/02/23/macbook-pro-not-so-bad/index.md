@@ -11,21 +11,21 @@ It's not so bad...
 
 Thanks to various blog comments I managed to solve most of the niggles I had with the laptop:
 
-muted the startup sound
+## muted the startup sound
 
 This was pretty straight forward: download [StartupSound.prefPane](http://www5e.biglobe.ne.jp/~arcana/software.en.html) and choose the appropriate settings (I ticked the "Mute" box next to "Startup Volume" which seems to work fine.)
 
-reconfigured keyboard layout using Ukulele
+## reconfigured keyboard layout using Ukulele
 
 (definitely a personal preference) I configured a [keyboard layout](http://en.wikipedia.org/wiki/Keyboard_layout) to match UK PC keyboards: backtick (`` ` ``) to the left of 1, hash# and tilde~ next to return, at@ and double-quote" reversed (double-quote via Shift+2) and finally (I think) putting backslash and pipe| to the left of Z) If you want it, you can [download my British PC keyboard layout](https://hexmen.com/uploads/British%20PC.keylayout) (if I remember right, you have to move the file into `/System/Library/Keyboard Layouts/` and may need to restart before you can choose it in System Preferences / International / Input Menu - and if you want a decent icon you'll need the [flag icon](https://hexmen.com/uploads/British%20PC.icns) to bung in the `Keyboard Layouts` folder too.)
 
 There is still one rather annoying aspect of the keyboard layout: it changes back to a Mac layout whenever I use [Opera](http://www.opera.com) and tab into a password field - god knows what that's all about!? I've got used to it now though and can quickly change back with Apple+Space
 
-Better sleep & hibernate
+## Better sleep & hibernate
 
 Apple must have distributed a software update including fixes so waking up from sleep became a lot faster and more reliable. I've been months without shutting my Mac down, though I've recently changed my power settings so it goes into stand-by if I close the lid while plugged in, but goes into deep sleep if I close the lid while running off battery. What I'd really like is a way to say "go into stand-by for 15 minutes, then go into deep-sleep" - I think that'd be better when you're running of battery and carting your computer from room to room - but want it to go into deep-sleep if you hit the motorway for 2 hours.
 
-Region-free DVD
+## Region-free DVD
 
 Hackers are great. About 8 months on from writing my bitch-post someone pointed out some a [forum thread pointing to new firmware](http://forum.rpc1.org/viewtopic.php?t=43012&start=0). Upgrading the firmware and installing [Region X](http://xvi.rpc1.org/) means I can actually view DVDs I paid for... (Is that a "w00t!" I hear at the back?)
 

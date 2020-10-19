@@ -17,7 +17,7 @@ For us, we realized something was wrong when we opened multiple search-results i
 
 I guess we should have paid more attention to start with. Our previous web development background revolved around enterprise-class application servers. Sessions just worked, no concurrency worries. If you happened to run into a race-condition, you worked around it using threading and locking facilities provided by the implementation language. It never occurred to us that PHP would be so different.
 
-PHP, the way we're running it (via mod_php) couldn't be further from the application-server model if it tried. (By default) sessions are implemented using file-based storage, not held in shared memory ready for use by multiple threads.
+PHP, the way we're running it (via `mod_php`) couldn't be further from the application-server model if it tried. (By default) sessions are implemented using file-based storage, not held in shared memory ready for use by multiple threads.
 
 Storing sessions in files means PHP has to take heavy-handed precautions against concurrent read/write access to the session - it locks the session file for the duration of a request.
 

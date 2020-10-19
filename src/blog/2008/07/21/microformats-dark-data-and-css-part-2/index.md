@@ -21,14 +21,28 @@ Contact phone numbers are styled using common fonts and padding, but with differ
 
 Phone numbers can be output and formatted using multiple classes working together:
 
-    <span class="tel home">+1 212 123 1234<span>
+```html
+<span class="tel home">+1 212 123 1234<span></span></span>
+```
 
 Because `home` is such a generic term, we'd write CSS using a 2-class selector like this:
 
-    .tel { font: ...; padding-left: 16px; background: transparent no-repeat middle left; }
-    .tel.home { background-image: url(icons/tel-home.gif); }
-    .tel.work { background-image: url(icons/tel-work.gif); }
-    .tel.fax { background-image: url(icons/tel-fax.gif); }
+```css
+.tel {
+  font: ...;
+  padding-left: 16px;
+  background: transparent no-repeat middle left;
+}
+.tel.home {
+  background-image: url(icons/tel-home.gif);
+}
+.tel.work {
+  background-image: url(icons/tel-work.gif);
+}
+.tel.fax {
+  background-image: url(icons/tel-fax.gif);
+}
+```
 
 Dropping `tel` from the mark-up would cause all styling to be lost - the value `home` on its own does not encapsulate enough information to determine its position in a class hierarchy. Later on, I'll come back to this and suggest hyphenation as an option that may embody a class relationship more explicitly.
 
@@ -36,26 +50,31 @@ Dropping `tel` from the mark-up would cause all styling to be lost - the value `
 
 By definition, class is an unordered set of white-space separated values. The values "tel home" and "home tel" should be treated the same, with the CSS selector ".tel.home" applying with equal specificity to both numbers below.
 
-    <span class="tel home">+1 212 12341 12112<span>
-    <span class="home tel">+1 212 12341 12112<span>
+```html
+<span class="tel home">+1 212 12341 12112</span> <span class="home tel">+1 212 12341 12112</span>
+```
 
 We must bear this ordering-independence in mind when storing data in `class`. Trying to store multiple bits of data in sequential order cannot work - e.g. a conference schedule:
 
-    ...
-    <li><span class="dtstart 9:00 dtend 9:15" title="9am">09:00</span> - Registration</li>
-    <li><span class="dtstart 9:15 dtend 10:30" title="9:15am">09:15</span> - Keynote</li>
-    <li><span class="dtstart 10:30 dtend 10:45" title="10:30am">10:30</span> - Coffee</li>
-    <li><span class="dtstart 10:45 dtend 12:00" title="10:45am">10:45</span> - Session 1</li>
-    <li><span class="dtstart 13:00 dtend 14:00" title="1pm">13:00</span> - Session 1</li>
-    ...
+```html
+...
+<li><span class="dtstart 9:00 dtend 9:15" title="9am">09:00</span> - Registration</li>
+<li><span class="dtstart 9:15 dtend 10:30" title="9:15am">09:15</span> - Keynote</li>
+<li><span class="dtstart 10:30 dtend 10:45" title="10:30am">10:30</span> - Coffee</li>
+<li><span class="dtstart 10:45 dtend 12:00" title="10:45am">10:45</span> - Session 1</li>
+<li><span class="dtstart 13:00 dtend 14:00" title="1pm">13:00</span> - Session 1</li>
+...
+```
 
 _Note: in this example, humans are supposed to infer end-times by looking at the start-time of the following event. We include machine-data for end-times because "inference" is not easy for programmers to implement._
 
 Although the order is clear and correct in the mark-up, browsers, parsers and libraries have no obligation to maintain the order when accessed. e.g. a "classes" method could return an arbitrarily ordered array of classes:
 
+```js
 // fetch the classes for the first item in the schedule:
-var classes = \$('.dtstart:nth(0)').classes();
+var classes = \$(".dtstart:nth(0)").classes();
 // may output: \["9:00", "9:15", "dtend", "dtstart"\]
+```
 
 Without further labouring, the take-home point is: data in class-values cannot rely on ordering.
 
@@ -65,13 +84,21 @@ You may not be 100% certain how your content will be processed or transformed, o
 
 For example: times embedded in machine-data can be arbitrarily precise, from specifying years on their own ("2008"), to fully specifying a time-zone and exact second of an event ("20080721T124032+0100") The longer format is unlikely to cause confusion (to machines), but the shorter variants could easily be mistaken for model numbers. e.g. the ISSN of periodicals for sale:
 
-    <li><a href="..." class="issn 02624079 dtstart 20080719" title="New Scientist dated 19th July 2008">New Scientist no. 2665</a></li>
+```html
+<li>
+  <a href="..." class="issn 02624079 dtstart 20080719" title="New Scientist dated 19th July 2008"
+    >New Scientist no. 2665</a
+  >
+</li>
+```
 
 As we can't rely on ordering, we need to join the data-type and the data-value together. A few approaches have been suggested, including wrapping the value, or concatenating the pieces with an arbitrary separator - I suggest using a hyphen, which I'll justify in a minute:
 
-    <a href="..." class="issn{02624079} dtstart{20080719}">
-    <a href="..." class="issn#02624079 dtstart#20080719">
-    <a href="..." class="issn-02624079 dtstart-20080719">
+```html
+<a href="..." class="issn{02624079} dtstart{20080719}"></a>
+<a href="..." class="issn#02624079 dtstart#20080719"></a>
+<a href="..." class="issn-02624079 dtstart-20080719"></a>
+```
 
 ### The hyphenated-prefix selector `[attribute|=prefix]`
 
@@ -79,32 +106,66 @@ CSS 2 introduced [several attribute selectors](http://www.w3.org/TR/REC-CSS2/sel
 
 The specification admits the primary purpose of this selector is for matching language subcodes; i.e. where CSS rules need only apply to content written in some subset of natural languages:
 
-\[lang|=en\] blockquote, \[lang|=en\] q, blockquote\[lang|=en\], q\[lang|=en\] { quotes: '“' ”'; }
-\[lang|=de\] blockquote, \[lang|=de\] q, blockquote\[lang|=de\], q\[lang|=de\] { quotes: '«' '»'; }
+```css
+[lang|="en"] blockquote,
+[lang|="en"] q,
+blockquote[lang|="en"],
+q[lang|="en"] {
+  quotes: "“" "”";
+}
+[lang|="de"] blockquote,
+[lang|="de"] q,
+blockquote[lang|="de"],
+q[lang|="de"] {
+  quotes: "«" "»";
+}
+```
 
 The rules above specify different quote-marks for German and English. Using the prefix selector means the appropriate rule applies to all English languages, including "en-GB" and "en-US", as well as content marked no more specifically than lang="en". Similarly, the 'de' rule applies to all German languages.
 
 However, this selector can just as easily be applied to classes. We can rewrite the telephone-number example as:
 
-    <span class="tel-work">+1 212 800 1234<span>
-    <span class="tel-home">+1 212 123 1234<span>
+```html
+<span class="tel-work">+1 212 800 1234</span> <span class="tel-home">+1 212 123 1234</span>
+```
 
-
-
-
-
-    [class|=tel] { font: ...; padding-left: 16px; background: transparent no-repeat middle left; }
-    .tel-home { background-image: url(icons/tel-home.gif); }
-    .tel-work { background-image: url(icons/tel-work.gif); }
-    .tel-fax { background-image: url(icons/tel-fax.gif); }
+```css
+[class|="tel"] {
+  font: ...;
+  padding-left: 16px;
+  background: transparent no-repeat middle left;
+}
+.tel-home {
+  background-image: url(icons/tel-home.gif);
+}
+.tel-work {
+  background-image: url(icons/tel-work.gif);
+}
+.tel-fax {
+  background-image: url(icons/tel-fax.gif);
+}
+```
 
 ### Relaxing the hyphenated-prefix rules
 
 Sadly, the hyphenated-prefix is overly-restricted. In the following example, only one rule applies:
 
-    [class|=issn] { font-weight: bold }
-    [class|=dtstart] { background-image: url(bg/microformat.gif); }
-    <li><a href="..." class="issn-02624079 dtstart-20080719" title="New Scientist dated 19th July 2008">New Scientist no. 2665</a></li>
+```css
+[class|="issn"] {
+  font-weight: bold;
+}
+[class|="dtstart"] {
+  background-image: url(bg/microformat.gif);
+}
+```
+
+```html
+<li>
+  <a href="..." class="issn-02624079 dtstart-20080719" title="New Scientist dated 19th July 2008"
+    >New Scientist no. 2665</a
+  >
+</li>
+```
 
 The problem is due to the way `[attribute|=prefix]` is defined:
 
@@ -120,11 +181,15 @@ If the definition had instead been made to cater for a white space separated set
 
 Assuming JavaScript libraries (or microformat parsers) already implement attribute-selectors, it's a simple matter to support white space separated hyphenated-prefixes. The key regular-expression is:
 
-    /(^|\s)prefix(-|\s|$)/
+```js
+/(^|\s)prefix(-|\s|$)/;
+```
 
 Assuming your users know what they're doing and are willing to fix their own issues after throwing something stupid at your library, the regular-expression is easily built on executed on the fly:
 
-    new RegExp("(^|\\s)" + prefix + "(-|\\s|$)").test(attribute)
+```js
+new RegExp("(^|\\s)" + prefix + "(-|\\s|$)").test(attribute);
+```
 
 Or (I think), in [XPath 2.0](http://www.w3.org/TR/xpath-functions/#func-matches):
 

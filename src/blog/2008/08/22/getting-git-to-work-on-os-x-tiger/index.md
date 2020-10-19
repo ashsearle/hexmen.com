@@ -19,48 +19,64 @@ I already had macports installed, but if you haven't, follow the [macports insta
 
 If you've had macports installed a while, make sure it's up to date:
 
-    $ sudo port selfupdate
+```bash
+sudo port selfupdate
+```
 
 We want to use git to connect to subversion repositories as well, so we'll just check that's possible:
 
-    $ port list variant:svn
-    git-core        @1.6.0  devel/git-core
-    subversion      @1.5.1  devel/subversion
+```
+$ port list variant:svn
+git-core        @1.6.0  devel/git-core
+subversion      @1.5.1  devel/subversion
+```
 
 I already had subversion installed but through trial-and-error found I needed to reinstall it with perl-bindings (git must be using perl scripts to talk to subversion...) Note: I'm using the `-f` flag to force it to reinstall, you might want to try without first, just to see what conflicts it brings up:
 
-    $ sudo port uninstall -f subversion-perlbindings
-    $ sudo port install -f subversion-perlbindings
+```bash
+sudo port uninstall -f subversion-perlbindings
+sudo port install -f subversion-perlbindings
+```
 
 Next, we install git:
 
-    # This may take a while to install with all its dependencies:
-    $ sudo port install git-core +svn
+```bash
+# This may take a while to install with all its dependencies:
+sudo port install git-core +svn
+```
 
 And finally, we check it works:
 
-    $ mkdir myproject; cd myproject;
-    # Check your PATH's set properly, this should output:
-    # fatal: Not a git repository
-    $ git svn
-    # If that's OK... clone a repository:
-    $ git svn clone http://example.com/svn/project/trunk
+```bash
+mkdir myproject; cd myproject;
+# Check your PATH's set properly, this should output:
+# fatal: Not a git repository
+git svn
+# If that's OK... clone a repository:
+git svn clone http://example.com/svn/project/trunk
+```
 
 ### Can't locate Error.pm
 
 If you're getting _Can't locate Error.pm_ or _Can't locate SVN/Core.pm_ you should immediately try:
 
-    $ PATH=/opt/local/bin:$PATH git svn
+```bash
+PATH=/opt/local/bin:$PATH git svn
+```
 
-If that works, you know it's just a PATH problem. It's something to do with Apple's perl install having slightly kooky ideas about where to store perl libraries.
+If that works, you know it's just a `PATH` problem. It's something to do with Apple's perl install having slightly kooky ideas about where to store perl libraries.
 
-If you're still getting complaints about Error.pm, you need to install the CPAN module - and we're going to use the /opt/local/bin instance of cpan, to make sure things go in the right place for us:
+If you're still getting complaints about Error.pm, you need to install the CPAN module - and we're going to use the `/opt/local/bin` instance of cpan, to make sure things go in the right place for us:
 
-    $ sudo /opt/local/bin/cpan -i lib::Error
+```bash
+sudo /opt/local/bin/cpan -i lib::Error
+```
 
 Cross your fingers, and try again:
 
-    $ PATH=/opt/local/bin:$PATH
-    $ git svn clone http://example.com/svn/project/trunk
+```bash
+PATH=/opt/local/bin:$PATH
+git svn clone http://example.com/svn/project/trunk
+```
 
 If things are working, git will spend a while cloning the subversion repository by pulling out every single revision so you can have a complete set of revisions (including deltas), ready for you to refer to with lightning-speed regardless of internet connectivity. Which is nice.

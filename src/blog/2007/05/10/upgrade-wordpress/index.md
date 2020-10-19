@@ -11,8 +11,10 @@ Switching to MySQLi was easy and worked as described, except for one thing: I co
 
 Short-term fix: follow the first few steps of the [WordPress upgrade process](http://codex.wordpress.org/Upgrading_WordPress) but before [running the upgrade program](http://codex.wordpress.org/Upgrading_WordPress#Step_9:_Run_the_WordPress_upgrade_program) edit `wp-admin/upgrade-functions.php` and gut this function:
 
-    function wp_check_mysql_version() {
-        // (version-check removed)
-    }
+```php
+function wp_check_mysql_version() {
+  // (version-check removed)
+}
+```
 
 You should be able to run the upgrade program fine now.

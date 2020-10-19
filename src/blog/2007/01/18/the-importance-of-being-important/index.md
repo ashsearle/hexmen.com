@@ -1,5 +1,5 @@
 ---
-title: "The importance of being <code>!important</code>"
+title: "The importance of being !important"
 date: "2007-01-18T20:00:43.000Z"
 modified: "2011-01-03T17:21:36.000Z"
 folder: "2007/01/18/the-importance-of-being-important"
@@ -9,25 +9,29 @@ There are plenty of good articles describing how CSS specificity is calculated f
 
 To see how this works, consider this rule-set:
 
-    p.error {
-        height: 23px;
-        color: red !important;
-        background: black !important;
-        border: 1px solid red;
-        white-space: pre;
-    }
+```css
+p.error {
+  height: 23px;
+  color: red !important;
+  background: black !important;
+  border: 1px solid red;
+  white-space: pre;
+}
+```
 
 Separating the `!important` properties from the rest gives:
 
-    p.error {
-        color: red !important;
-        background: black !important;
-    }
-    p.error {
-        height: 23px;
-        border: 1px solid red;
-        white-space: pre;
-    }
+```css
+p.error {
+  color: red !important;
+  background: black !important;
+}
+p.error {
+  height: 23px;
+  border: 1px solid red;
+  white-space: pre;
+}
+```
 
 Both rule-sets have the same selector, and therefore the same specificity; but I think it helps to consider the `!important` rule-set as having a higher specificity. We can do this by treating `!important` as part of the selector.
 
@@ -35,15 +39,17 @@ Both rule-sets have the same selector, and therefore the same specificity; but I
 
 Let's move the `!important` modifier outside the brackets:
 
-    p.error !important {
-        color: red;
-        background: black;
-    }
-    p.error {
-        height: 23px;
-        border: 1px solid red;
-        white-space: pre;
-    }
+```css
+p.error !important {
+  color: red;
+  background: black;
+}
+p.error {
+  height: 23px;
+  border: 1px solid red;
+  white-space: pre;
+}
+```
 
 _Note: although "`p.error !important`" isn't a valid selector, I hope the intent is clear._
 

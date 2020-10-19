@@ -7,40 +7,37 @@ folder: "2006/12/26/revisiting-functionprototypeapply-for-ie5"
 
 You can learn a lot about JavaScript by implementing your own version of `apply`. In this post I present my own implementation with explanatory notes to highlight hidden complexity:
 
-    Function.prototype.apply = function(thisArg, argArray) {
-        if (typeof this != "function") {
-            throw new Error("apply called on incompatible " +
-                        "object (not a function)");
-        }
-        if (argArray != null && !(argArray instanceof Array)
-            && typeof argArray.callee != "function") {
-    	throw new Error("The 2nd argument to apply must " +
-                        "be an array or arguments object");
-        }
-        thisArg = (thisArg == null) ? window : Object(thisArg);
-        thisArg.__applyTemp__ = this;
-        // youngpup's hack
-        var parameters = [],
-            length = (argArray || "").length >>> 0;
-        for (var i = 0; i < length; i++) {
-    	parameters[i] = "argArray[" + i + "]";
-        };
-        var functionCall =
-                "thisArg.__applyTemp__(" + parameters + ")";
-        try {
-    	return eval(functionCall)
-        } finally {
-    	try {
-                delete thisArg.__applyTemp__
-            } catch (e) {
-                /* ignore */
-            }
-        }
+```js
+Function.prototype.apply = function (thisArg, argArray) {
+  if (typeof this != "function") {
+    throw new Error("apply called on incompatible " + "object (not a function)");
+  }
+  if (argArray != null && !(argArray instanceof Array) && typeof argArray.callee != "function") {
+    throw new Error("The 2nd argument to apply must " + "be an array or arguments object");
+  }
+  thisArg = thisArg == null ? window : Object(thisArg);
+  thisArg.__applyTemp__ = this;
+  // youngpup's hack
+  var parameters = [],
+    length = (argArray || "").length >>> 0;
+  for (var i = 0; i < length; i++) {
+    parameters[i] = "argArray[" + i + "]";
+  }
+  var functionCall = "thisArg.__applyTemp__(" + parameters + ")";
+  try {
+    return eval(functionCall);
+  } finally {
+    try {
+      delete thisArg.__applyTemp__;
+    } catch (e) {
+      /* ignore */
     }
-    Function.prototype.call = function(thisArg) {
-        return this.apply(thisArg,
-                Array.prototype.slice.apply(arguments, [1]));
-    }
+  }
+};
+Function.prototype.call = function (thisArg) {
+  return this.apply(thisArg, Array.prototype.slice.apply(arguments, [1]));
+};
+```
 
 Download: [apply-call.js](/code/apply-call.js)
 

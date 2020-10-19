@@ -13,6 +13,10 @@ export default function (props) {
           <img style={{ height: "1em" }} src={logoDataURI} alt="" />
           <span>Hexmen</span>
         </h1>
+        <div className="line-layout gap-s">
+          <Link to="/about/">About</Link>
+          <Link to="/contact/">Contact</Link>
+        </div>
       </header>
       <main>
         <section id="recent">

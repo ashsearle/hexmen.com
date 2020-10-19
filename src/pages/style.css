@@ -36,6 +36,11 @@ h6 code {
   font-size: inherit;
   line-height: inherit;
 }
+.branding {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
 .branding img {
   margin-bottom: 0;
 }

@@ -5,7 +5,8 @@ modified: "2011-01-03T17:20:13.000Z"
 folder: "2008/11/20/concatenating-arrays-in-php"
 ---
 
-Just a quick post so I know where to look the next time I forget how to concatenate arrays in PHP.  
+Just a quick post so I know where to look the next time I forget how to concatenate arrays in PHP.
+
 Use [`array_merge`](http://php.net/array_merge) to concatenate two numerically-indexed arrays; not [`array_push`](http://php.net/array_push) and not [the array union operator: `+`](http://php.net/language.operators.array).
 
     $first = array('doh', 'ray', 'me');

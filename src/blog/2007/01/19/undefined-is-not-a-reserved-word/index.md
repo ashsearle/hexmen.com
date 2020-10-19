@@ -19,5 +19,6 @@ Let's get this straight: `undefined` is not a reserved word. It's safer and more
       return $(row).getElementsBySelector(...
     }
 
-As `null` **is** a reserved word (and it's quicker to type) I'd expect the Prototype community to favour it.  
+As `null` **is** a reserved word (and it's quicker to type) I'd expect the Prototype community to favour it.
+
 _Note: assuming `undefined` hasn't been redefined, the two code fragments are functionally identical. i.e. the equals operator (`==`) treats `null` and the primitive value `undefined` exactly the same._

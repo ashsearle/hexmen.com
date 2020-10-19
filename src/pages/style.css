@@ -26,3 +26,13 @@ main {
 .grvsc-container {
   border-radius: 0 !important;
 }
+/* Undo unwanted font-size/line-height inside headings */
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+  font-size: inherit;
+  line-height: inherit;
+}

@@ -5,13 +5,15 @@ modified: "2011-01-03T17:21:36.000Z"
 folder: "2006/12/06/iterating-over-sparse-arrays"
 ---
 
-This is a quick tip for iterating over arrays and other objects with a `length` property. It's particularly suitable for sparse arrays, without having to worry whether any methods have been added to the prototype chain.  
+This is a quick tip for iterating over arrays and other objects with a `length` property. It's particularly suitable for sparse arrays, without having to worry whether any methods have been added to the prototype chain.
+
 Dean Edwards recently described a pretty cool technique for [enumerating javascript objects](http://dean.edwards.name/weblog/2006/07/enum/), but (currently) it's not appropriate for sparse arrays. In case you're unfamiliar with sparse arrays (or I'm using the wrong term), in the language of the [Mozilla documentation for `Array.forEach`](http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Objects:Array:forEach), a sparse array is one that's not "dense". For example:
 
 // create a three-element array
 var array = \['hope', 'empire', 'jedi'\];
 // add a fourth
-array\[987654321\] = 'menace';  
+array\[987654321\] = 'menace';
+
 // because array length is now 987654322
 // this is a really inefficient way of iterating:
 for (var i = 0; i < array.length; i++) {

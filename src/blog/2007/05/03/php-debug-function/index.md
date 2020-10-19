@@ -5,7 +5,8 @@ modified: "2011-01-03T17:21:35.000Z"
 folder: "2007/05/03/php-debug-function"
 ---
 
-Like most developers, I often find it useful to spit out a few messages in the middle of a PHP script - especially when I'm debugging some problems.  
+Like most developers, I often find it useful to spit out a few messages in the middle of a PHP script - especially when I'm debugging some problems.
+
 Sadly, after only a few months our pristine code-base has become spotted with this, over and over again:
 
     if (DEBUG) {

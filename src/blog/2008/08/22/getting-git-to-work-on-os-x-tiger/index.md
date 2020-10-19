@@ -5,14 +5,18 @@ modified: "2011-01-03T17:20:14.000Z"
 folder: "2008/08/22/getting-git-to-work-on-os-x-tiger"
 ---
 
-If you haven't heard of [git](<http://en.wikipedia.org/wiki/Git_(software)>) yet, it's quickly becoming the preferred version-control system for tons of open-source projects, including the twin suns of [ruby on rails](http://github.com/rails/rails/tree/master) and [prototype](http://github.com/sstephenson/prototype/tree/master).  
-In fact, if you keep your eye on the [github blog](http://github.com/blog) you'll see a steady stream of well-known projects moving over to git, as diverse as the [Blueprint CSS framework](http://github.com/joshuaclayton/blueprint-css/tree/master) and the [Haskell compiler](http://github.com/ghc-hq/ghc/tree/master).  
+If you haven't heard of [git](<http://en.wikipedia.org/wiki/Git_(software)>) yet, it's quickly becoming the preferred version-control system for tons of open-source projects, including the twin suns of [ruby on rails](http://github.com/rails/rails/tree/master) and [prototype](http://github.com/sstephenson/prototype/tree/master).
+
+In fact, if you keep your eye on the [github blog](http://github.com/blog) you'll see a steady stream of well-known projects moving over to git, as diverse as the [Blueprint CSS framework](http://github.com/joshuaclayton/blueprint-css/tree/master) and the [Haskell compiler](http://github.com/ghc-hq/ghc/tree/master).
+
 Basically, if _git_ was a stock-market commodity, analysts would be issuing **strong buy** recommendations left, right and centre. Git's [tipping-point](http://en.wikipedia.org/wiki/The_Tipping_Point) has arrived.
 
 ### How to play
 
-_If you've arrived here via search-engine, it's probably because you're trying to work around errors like **Can't locate Error.pm** or **Can't locate SVN/Core.pm**. Read on..._  
-I already had macports installed, but if you haven't, follow the [macports install instructions](http://www.macports.org/install.php) - we'll be using macports to download and install git as it's supposed to be simpler than building from source.  
+_If you've arrived here via search-engine, it's probably because you're trying to work around errors like **Can't locate Error.pm** or **Can't locate SVN/Core.pm**. Read on..._
+
+I already had macports installed, but if you haven't, follow the [macports install instructions](http://www.macports.org/install.php) - we'll be using macports to download and install git as it's supposed to be simpler than building from source.
+
 If you've had macports installed a while, make sure it's up to date:
 
     $ sudo port selfupdate
@@ -48,7 +52,8 @@ If you're getting _Can't locate Error.pm_ or _Can't locate SVN/Core.pm_ you shou
 
     $ PATH=/opt/local/bin:$PATH git svn
 
-If that works, you know it's just a PATH problem. It's something to do with Apple's perl install having slightly kooky ideas about where to store perl libraries.  
+If that works, you know it's just a PATH problem. It's something to do with Apple's perl install having slightly kooky ideas about where to store perl libraries.
+
 If you're still getting complaints about Error.pm, you need to install the CPAN module - and we're going to use the /opt/local/bin instance of cpan, to make sure things go in the right place for us:
 
     $ sudo /opt/local/bin/cpan -i lib::Error

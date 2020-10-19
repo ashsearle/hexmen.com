@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 import moment from "moment";
+import { SiteFooter } from "../components";
 import logoDataURI from "../components/hexmen-logo-2020-10-13.svg";
 import "./style.css";
 
@@ -38,7 +39,7 @@ export default function (props) {
           ))}
         </section>
       </main>
-      <div id="site-footer">&copy; 2020 Hexmen Limited</div>
+      <SiteFooter />
     </>
   );
 }

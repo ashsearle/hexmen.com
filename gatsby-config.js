@@ -6,8 +6,6 @@ module.exports = {
       twitter: "@hexmen",
     },
   },
-  // Temporary prefix so we can test things in production before big-bang
-  pathPrefix: "/g",
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,

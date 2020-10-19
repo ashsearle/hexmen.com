@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Layout from "../components/layout.js";
+import { SiteFooter, Layout } from "../components/";
 import "../pages/style.css";
 
 const isProduction = process.env.NODE_ENV === "production";
@@ -11,7 +11,7 @@ export default function (props) {
     <Layout pageContext={pageContext}>
       <h1>{props.data.markdownRemark.frontmatter.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }} />
-      <div id="site-footer">&copy; 2020 Hexmen Limited</div>
+      <SiteFooter />
 
       {isProduction ? null : (
         <pre>

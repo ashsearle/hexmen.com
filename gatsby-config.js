@@ -1,7 +1,10 @@
 module.exports = {
   siteMetadata: {
     siteUrl: "https://hexmen.com",
-    name: "Hexmen",
+    author: "Ash Searle",
+    title: "Hexmen — Full stack development",
+    description:
+      "Over 20 years industry experience including React, Node.js, AngularJS, Jamstack; skilled at evolving legacy code in addition to creating greenfield projects.",
     social: {
       twitter: "@hexmen",
     },

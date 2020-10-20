@@ -23,7 +23,7 @@ export default function (props) {
     "og:type": "website",
     "og:title": siteMetadata.title,
     "og:description": siteMetadata.description,
-    "og:image": "https://hexmen.com/images/profile-ash.jpg",
+    "og:image": `${siteUrl}/images/profile-ash.jpg`,
     "og:image:alt": "Wet plate portrait photo",
     "og:updated_time": new Date().toISOString(),
   };
@@ -31,6 +31,7 @@ export default function (props) {
     <>
       <Helmet htmlAttributes={{ lang: "en-GB" }}>
         <title>{siteMetadata.title}</title>
+        <link rel="shortcut icon" href={`${siteUrl}/favicon-32x32.png`} />
         {Object.entries(metaNamedProperties).map(([name, content]) => (
           <meta key={name} name={name} content={content} />
         ))}

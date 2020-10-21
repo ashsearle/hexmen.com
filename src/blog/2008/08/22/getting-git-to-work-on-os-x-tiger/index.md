@@ -2,7 +2,7 @@
 title: "Getting git to work on OS X Tiger"
 date: "2008-08-22T11:58:10.000Z"
 modified: "2011-01-03T17:20:14.000Z"
-folder: "2008/08/22/getting-git-to-work-on-os-x-tiger"
+blurb: "Some lessons learned and tips to help migrate from Subversion to Git on OS X Tiger"
 ---
 
 If you haven't heard of [git](https://en.wikipedia.org/wiki/Git) yet, it's quickly becoming the preferred version-control system for tons of open-source projects, including the twin suns of [ruby on rails](https://github.com/rails/rails) and [prototype](https://github.com/prototypejs/prototype).

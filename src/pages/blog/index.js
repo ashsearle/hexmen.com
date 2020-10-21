@@ -41,16 +41,11 @@ const BlogNav = ({ previous, next }) => {
 
 export default function BlogHomepage(props) {
   const [mostRecentPost, previousPost] = props.data.allMarkdownRemark.nodes;
-  const { frontmatter, excerpt } = mostRecentPost;
+  const { frontmatter } = mostRecentPost;
   const publishedDate = moment(frontmatter.date).format("D MMM YYYY");
   return (
     <>
-      <HeadContent
-        frontmatter={{
-          ...frontmatter,
-          excerpt,
-        }}
-      />
+      <HeadContent frontmatter={frontmatter} />
       <header className="branding">
         <h1 style={{ display: "flex", alignItems: "center", fontSize: "2rem", lineHeight: 1.2 }}>
           <img style={{ height: "1em" }} src={logoDataURI} alt="" />
@@ -88,12 +83,12 @@ export const pagesQuery = graphql`
         id
         timeToRead
         html
-        excerpt
         fields {
           slug
         }
         frontmatter {
           title
+          blurb
           date
           modified
         }

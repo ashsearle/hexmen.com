@@ -2,7 +2,7 @@
 title: "In search of an Adobe Reader alternative on Mac"
 date: "2008-07-02T10:09:59.000Z"
 modified: "2011-01-03T17:20:14.000Z"
-folder: "2008/07/02/in-search-of-an-adobe-reader-alternative-on-mac"
+blurb: "A short quest to find a PDF reader for Mac implementing a better Search option than Adobe Reader"
 ---
 
 I'm looking for an alternative to Adobe Reader on OS X after discovering its "Find" function can't find jack.

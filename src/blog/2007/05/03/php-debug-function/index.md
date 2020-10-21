@@ -2,7 +2,7 @@
 title: "A handy PHP debug function"
 date: "2007-05-03T17:19:44.000Z"
 modified: "2011-01-03T17:21:35.000Z"
-folder: "2007/05/03/php-debug-function"
+blurb: "Use this function to avoid scattering conditional “if (DEBUG)” logic throughout your PHP codebase"
 ---
 
 Like most developers, I often find it useful to spit out a few messages in the middle of a PHP script - especially when I'm debugging some problems.

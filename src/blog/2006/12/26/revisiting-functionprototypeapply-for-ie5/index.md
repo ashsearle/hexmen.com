@@ -2,7 +2,7 @@
 title: "Function.prototype.apply revisited"
 date: "2006-12-26T18:50:46.000Z"
 modified: "2011-01-03T17:21:36.000Z"
-folder: "2006/12/26/revisiting-functionprototypeapply-for-ie5"
+blurb: "Some notes and lessons learned while implementing a Function.prototype.apply polyfill for IE 5"
 ---
 
 You can learn a lot about JavaScript by implementing your own version of `apply`. In this post I present my own implementation with explanatory notes to highlight hidden complexity:

@@ -8,7 +8,7 @@ export default function HeadContent(props) {
 
   const { pageContext, frontmatter } = props;
 
-  const description = frontmatter?.excerpt || siteMetadata.description;
+  const description = frontmatter?.blurb || siteMetadata.description;
   const slug = pageContext?.slug;
   const url = `${siteUrl}${slug}`;
   const ogType = slug ? "article" : "website";

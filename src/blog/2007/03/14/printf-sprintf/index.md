@@ -2,7 +2,7 @@
 title: "sprintf for JavaScript"
 date: "2007-03-14T15:59:09.000Z"
 modified: "2011-01-03T17:21:36.000Z"
-folder: "2007/03/14/printf-sprintf"
+blurb: "Introducing a free sprintf implementation for JavaScript - based on Perl syntax"
 ---
 
 Avoid writing formatting functions in JavaScript by grabbing yourself a decent sprintf implementation - handling padding, truncation, floating-point numbers, left/right alignment and _re-ordered arguments_.

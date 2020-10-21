@@ -2,7 +2,7 @@
 title: "Concatenating arrays in PHP"
 date: "2008-11-20T12:46:48.000Z"
 modified: "2011-01-03T17:20:13.000Z"
-folder: "2008/11/20/concatenating-arrays-in-php"
+blurb: "A short reminder of different ways to combine two arrays in PHP"
 ---
 
 Just a quick post so I know where to look the next time I forget how to concatenate arrays in PHP.

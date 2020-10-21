@@ -2,7 +2,7 @@
 title: "Array push and pop: a complete embarrassment for JavaScript"
 date: "2006-12-06T13:00:49.000Z"
 modified: "2011-01-03T17:21:36.000Z"
-folder: "2006/12/06/push-and-pop"
+blurb: "An exploration of some edge cases manipulating arrays in JavaScript"
 ---
 
 Most JavaScript libraries include trivial implementations of Array's `push` and `pop` methods to provide support for older browsers. However, literally _every_ library's implementation is flawed. While this is bad enough, I've also found that _every browser's implementation of push and pop contains bugs_. These vary from browser to browser: Internet Explorer's methods can't be reused; Safari has type-conversion issues; and Firefox & Opera don't truncate Arrays properly.

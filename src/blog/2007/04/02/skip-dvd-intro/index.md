@@ -2,7 +2,7 @@
 title: "How to skip DVD intros"
 date: "2007-04-02T10:16:40.000Z"
 modified: "2011-01-03T17:21:36.000Z"
-folder: "2007/04/02/skip-dvd-intro"
+blurb: "A couple of physical step-by-step procedures to try and bypass irritating DVD intros"
 ---
 
 No-one enjoys the force-fed FBI, F.A.C.T. and Copyright propaganda on DVDs. Thankfully, _there are ways of skipping them_.

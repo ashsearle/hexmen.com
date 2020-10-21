@@ -2,7 +2,7 @@
 title: "Google: Where art thou time conversion?"
 date: "2008-10-14T14:51:20.000Z"
 modified: "2011-01-03T17:20:14.000Z"
-folder: "2008/10/14/google-where-art-thou-time-conversion"
+blurb: "A quick grumble about how easy it is to use Google for calculations and weight conversations - but not to translate times from one timezone to another"
 ---
 
 I love the fact you can use Google to perform basic calculations and conversions.

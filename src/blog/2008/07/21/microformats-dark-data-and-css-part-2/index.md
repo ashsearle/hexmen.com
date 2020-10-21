@@ -2,7 +2,7 @@
 title: "Microformats, dark data and CSS - part 2"
 date: "2008-07-21T14:52:01.000Z"
 modified: "2011-01-03T17:20:14.000Z"
-folder: "2008/07/21/microformats-dark-data-and-css-part-2"
+blurb: "Acting on data buried in class attribute would be easier with an enhanced attribute selector"
 ---
 
 The [first part of this article](https://hexmen.com/blog/2008/07/15/microformats-dark-data-and-css-part-1/) considered over 100 HTML 4 attributes and came to the conclusion `class` was the only one suitable for storing _machine data_ (i.e. data specifically inserted and intended for machine parsing.)

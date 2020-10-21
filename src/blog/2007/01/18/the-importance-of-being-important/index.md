@@ -2,7 +2,7 @@
 title: "The importance of being !important"
 date: "2007-01-18T20:00:43.000Z"
 modified: "2011-01-03T17:21:36.000Z"
-folder: "2007/01/18/the-importance-of-being-important"
+blurb: "This article describes a way to think about and rank !important properties as part of standard CSS specficity"
 ---
 
 There are plenty of good articles describing how CSS specificity is calculated for normal rule-sets, but the `!important` modifier is often ignored or overlooked. However, with a little manipulation, `!important` can simply be treated as one more factor in the specificity calculation.

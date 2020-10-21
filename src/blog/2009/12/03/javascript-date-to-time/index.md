@@ -2,7 +2,7 @@
 title: "JavaScript Date to Time"
 date: "2009-12-03T11:29:14.000Z"
 modified: "2013-04-13T16:38:27.000Z"
-folder: "2009/12/03/javascript-date-to-time"
+blurb: "A short post about using parentheses with JavaScript constructors, and compact code to coerce a Date to a unix timestamp"
 ---
 
 Subtle differences sometimes indicate the proficiency of a programmer.

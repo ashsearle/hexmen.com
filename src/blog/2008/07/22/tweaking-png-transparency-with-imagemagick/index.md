@@ -2,7 +2,7 @@
 title: "Tweaking PNG transparency with ImageMagick"
 date: "2008-07-22T12:21:32.000Z"
 modified: "2011-01-03T17:20:14.000Z"
-folder: "2008/07/22/tweaking-png-transparency-with-imagemagick"
+blurb: "A brief article with command-line example using ImageMagick to tweak an image’s transparency"
 ---
 
 This took me way too long to find out, so I thought I'd blog here and hopefully save someone else some time.

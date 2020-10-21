@@ -2,7 +2,7 @@
 title: "The MacBook Pro’s not so bad..."
 date: "2009-02-23T12:36:15.000Z"
 modified: "2011-01-03T17:20:13.000Z"
-folder: "2009/02/23/macbook-pro-not-so-bad"
+blurb: "After initial complaints, some niggles were addresses and I’ve grown quite fond of my MBP"
 ---
 
 Two years after [moaning about my MacBook Pro](https://hexmen.com/blog/2007/02/16/i-hate-my-macbook-pro/) I figure it's time for an update:

@@ -2,7 +2,7 @@
 title: 'Amazon’s bizarre "Free HDMI cable" deal'
 date: "2008-02-29T11:45:18.000Z"
 modified: "2011-01-03T17:20:14.000Z"
-folder: "2008/02/29/amazons-bizarre-free-hdmi-cable-deal"
+blurb: "Amazon’s UI decisions sometimes make it easy to miss opportunities to save money and grab a bargain."
 ---
 
 Sony don't include an HDMI cable with the UK's PlayStation 3 console (40GB version). But, if you buy it from Amazon, they'll give you an HDMI cable free - if you ask for it.

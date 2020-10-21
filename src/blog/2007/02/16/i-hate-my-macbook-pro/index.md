@@ -2,10 +2,10 @@
 title: "I hate my Macbook Pro"
 date: "2007-02-16T12:36:11.000Z"
 modified: "2011-01-03T17:21:36.000Z"
-folder: "2007/02/16/i-hate-my-macbook-pro"
+blurb: "A few complaints about a 2006-era MacBook Pro: headphone detection, DVD drive location and some odd keyboard labelling"
 ---
 
-Don't misunderstand me: I like OS X, I like the build-quality, and I like the look But there are some things I just can't stand; and they're ruining the whole experience for me:
+Don't misunderstand me: I like OS X, I like the build-quality, and I like the look But there are some things I just can't stand and they're ruining the whole experience for me:
 
 1.  anti-social speakers (delayed headphone detection)
 2.  poorly-positioned DVD-drive (and it's region-locked!)
@@ -15,7 +15,7 @@ Don't misunderstand me: I like OS X, I like the build-quality, and I like the lo
 
 My last laptop was a Thinkpad, with a physical volume control; this made it easy to check the volume was off and avoid annoying fellow train-passengers when booting-up the beast.
 
-In contrast, there's on volume-control on the 'Pro. The volume-level is set using function keys when the machine is already powered-on. Fortunately, it remembers the volume-level between reboots. Unfortunately, it also remembers whether you had headphones plugged in. This is what's really annoying.
+In contrast, there's no volume-control on the 'Pro. The volume-level is set using function keys when the machine is already powered-on. Fortunately, it remembers the volume-level between reboots. Unfortunately, it also remembers whether you had headphones plugged in. This is what's really annoying.
 
 When you turn on the 'Pro, it likes to shout about it: making a long _bonggggg_ noise. If you had headphones plugged-in the last time you turned off the laptop, it doesn't make a sound. But if you didn't: well, it doesn't matter whether you plug-in headphones before powering-on or not, the 'Pro will use it's internal speakers to make the _bonggg_ noise... That's really annoying in so many circumstances (libraries, trains, planes, quiet offices...)
 

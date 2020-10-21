@@ -2,7 +2,7 @@
 title: "PHP grievance number 1"
 date: "2008-07-10T18:44:19.000Z"
 modified: "2011-01-03T17:20:14.000Z"
-folder: "2008/07/10/php-grievance-number-1"
+blurb: "Most languages have an interpreter / compiler allowing you to make immediate use of function return values; but not PHP"
 ---
 
 There's a lot to hate about PHP.

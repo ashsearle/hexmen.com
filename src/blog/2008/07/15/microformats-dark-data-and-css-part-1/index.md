@@ -2,7 +2,7 @@
 title: "Microformats, dark data and CSS - part 1"
 date: "2008-07-15T12:53:22.000Z"
 modified: "2011-01-03T17:20:14.000Z"
-folder: "2008/07/15/microformats-dark-data-and-css-part-1"
+blurb: "A quick recap of microformats and the HTML attributes originally abused to implement them"
 ---
 
 There was a bit of kerfuffle when the [BBC dropped support for microformats](https://www.bbc.co.uk/blogs/radiolabs/2008/06/removing_microformats_from_bbc.shtml) in their program listings.
@@ -96,3 +96,5 @@ _(small side-note: out of all the attributes on the short-list, `class` is the *
 Having whittled down our options to one winner, we now need to decide how we're going to organize our data, and cram it into the `class` attribute. We need to take into account the definition of `class`, and that the attribute-value is treated as an _unordered_ list of _white-space separated_ tokens.
 
 That's for part 2, where I also propose tweaking a CSS3 selector to change it from a single niche application to become a general purpose tool in a web-designers arsenal.
+
+**Update:** This post predated HTML support for two features which cover the use-cases microformats tried to address: [microdata](https://html.spec.whatwg.org/multipage/microdata.html#microdata) and [custom data attributes](https://html.spec.whatwg.org/multipage/dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes).

@@ -1,8 +1,8 @@
 ---
 title: "Numbers in form-fields"
 date: "2007-01-08T13:39:58.000Z"
-modified: "2011-01-03T17:21:36.000Z"
-folder: "2007/01/08/numbers-in-form-fields"
+modified: "2020-10-21T16:55:52+0100"
+blurb: "Adding client-side validation using built-in JavaScript function opens a can of worms.  Explored"
 ---
 
 JavaScript is often used for client-side form validation to save unnecessary round-trips to the server. Unfortunately, lots of client-side validation relies on lenient JavaScript methods such as `parseInt`, allowing numbers to be input in ways totally unacceptable to your server-side code. Let's have a look at the problems and some solutions.
@@ -100,8 +100,6 @@ I set-out to briefly demonstrate how nice and compact unary `+` is, but managed 
 - Use regular-expressions to check user-input matches a required format
 - Show _some_ lenience
 
-### Coming Soon...
-
-The next two articles are very likely to touch on `getComputedStyle` and CSS's `!important` modifier. The first should be quite short (but I tend to waffle, so it'll probably end up long), and I need to work on some examples or illustrations for the second one. After that, I'm not sure. I've got some ridiculous code for creating PNGs in JavaScript, so I'll probably give that an outing at some point.
-
 Thanks for reading.
+
+**Update:** Built-in support has come a long way this was post was written. HTML Living Standard defines more [input types](https://html.spec.whatwg.org/multipage/input.html), markup support for [client-side form validation](https://html.spec.whatwg.org/multipage/forms.html#client-side-form-validation), as well as JavaScript based [constraint validation API](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api)

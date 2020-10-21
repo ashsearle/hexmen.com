@@ -2,7 +2,7 @@
 title: "Upgrade your new Macbook Pro’s memory yourself, and earn a free iPod (or two)"
 date: "2007-06-29T12:42:26.000Z"
 modified: "2011-01-03T17:20:14.000Z"
-folder: "2007/06/29/macbook-pro-memory"
+blurb: "Comparing Apple’s excessive optional extra costs compared to third-party / after-market pricing"
 ---
 
 Apple are marking the launch of the iPhone by keeping all their US stores open from 6pm till midnight. I suspect the sales-process will be slow (since contracts need to be signed) and the stores will be full of people picking up random goods just to pass the time.

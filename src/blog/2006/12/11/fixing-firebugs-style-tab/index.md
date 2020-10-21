@@ -2,7 +2,7 @@
 title: "Fixing Firebug’s Style Tab"
 date: "2006-12-11T11:13:40.000Z"
 modified: "2011-01-03T17:21:36.000Z"
-folder: "2006/12/11/fixing-firebugs-style-tab"
+blurb: "Steps to resolve an problem using the Style tab in Firebug beta"
 ---
 
 Lots of people are unable to use the **Style** tab in the new [Firebug](https://getfirebug.com/index.html) beta. The Firebug FAQ leads to a thread suggesting this fix:

@@ -2,7 +2,7 @@
 title: "Upgrading WordPress using mysqli"
 date: "2007-05-10T07:25:29.000Z"
 modified: "2011-01-03T17:21:35.000Z"
-folder: "2007/05/10/upgrade-wordpress"
+blurb: "A small workaround to bypass an irrelevant MySQL version check during a WordPress upgrade"
 ---
 
 Out-of-the-box WordPress assumes it's going to be talking to a MySQL database using PHP's original mysql extension instead of the newer mysql*i* extension (true up to WordPress 2.1.3 at least). If for some reason you need to run using mysqli, there are simple instructions on the WordPress support site: [MySQLi for WordPress 2.1.x](https://wordpress.org/support/topic/mysqli-for-wordpress-21x/).

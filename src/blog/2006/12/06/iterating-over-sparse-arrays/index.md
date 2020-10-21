@@ -2,7 +2,7 @@
 title: "Iterating over sparse arrays"
 date: "2006-12-06T17:59:54.000Z"
 modified: "2011-01-03T17:21:36.000Z"
-folder: "2006/12/06/iterating-over-sparse-arrays"
+blurb: "Presenting a niche technique to skip empty slots while processing a sparse array"
 ---
 
 This is a quick tip for iterating over arrays and other objects with a `length` property. It's particularly suitable for sparse arrays, without having to worry whether any methods have been added to the prototype chain.
@@ -37,3 +37,5 @@ The `if` condition checks whether the property is an _array index_ as defined by
 > A property name P (in the form of a string value) is an array index if and only if ToString(ToUint32(P)) is equal to P and ToUint32(P) is not equal to 232−1
 
 That's it.
+
+**Update:** Newer language constructs like [`for...of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of) do not handle sparse arrays well, although you could use this with `.flat(0)` to skip empty elements in a spare array: `for (const value of anArray.flat(0)) { /* handle value */ }`

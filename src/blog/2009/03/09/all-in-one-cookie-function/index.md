@@ -2,7 +2,7 @@
 title: "All-in-one cookie function"
 date: "2009-03-09T11:18:06.000Z"
 modified: "2011-01-03T17:20:13.000Z"
-folder: "2009/03/09/all-in-one-cookie-function"
+blurb: "Presenting a single overloaded function to get, set or delete cookies"
 ---
 
 Users stumbling across jQuery may notice the API's designed so a method's behaviour varies depending on the number and type of arguments passed in a call (have a look at the [jQuery method](https://api.jquery.com/jQuery/)!). In the right hands, this flexibility produces clean and elegant code without burdening the developer with 101 new method names to learn.

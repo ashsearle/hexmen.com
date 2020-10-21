@@ -2,7 +2,7 @@
 title: "MySQL latin1 → utf8 (Wordpress upgrade)"
 date: "2008-07-08T08:46:10.000Z"
 modified: "2011-01-03T17:20:14.000Z"
-folder: "2008/07/08/mysql-latin1-utf8-wordpress-upgrade"
+blurb: "Sometimes a small changes via command-line is all you need to fix encoding issues with a MySQL backup"
 ---
 
 Spurred on by [mass hacking](https://techcrunch.com/2008/06/11/my-blog-was-hacked-is-yours-next-huge-wordpress-security-issues/), I've updated my old (version 2.0.3) Wordpress install to something a little newer.

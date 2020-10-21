@@ -2,7 +2,7 @@
 title: "Fixing mysqldump character-encoding in Vim"
 date: "2008-07-09T10:22:23.000Z"
 modified: "2011-01-03T17:20:14.000Z"
-folder: "2008/07/09/fixing-mysqldump-character-encoding-in-vim"
+blurb: "Sometimes a small changes in a good text editor is all you need to fix encoding issues with a MySQL backup"
 ---
 
 If you find yourself in a position where your `mysqldump` backup/restore process isn't working, it's worth checking for character-encoding issues - and the best way to do this is often to look at the SQL in your backup file.

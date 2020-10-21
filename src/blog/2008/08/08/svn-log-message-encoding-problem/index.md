@@ -2,7 +2,7 @@
 title: "SVN log message encoding problem"
 date: "2008-08-08T11:03:12.000Z"
 modified: "2011-01-03T17:20:14.000Z"
-folder: "2008/08/08/svn-log-message-encoding-problem"
+blurb: "A quick tip on setting the character-encoding for a Subversion commit message from the command-line"
 ---
 
 It's good practice to put useful commentary in the log message whenever you commit code to a repository.

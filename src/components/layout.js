@@ -1,21 +1,15 @@
 import React from "react";
-import Helmet from "react-helmet";
 import { Link } from "gatsby";
-import useSiteMetadata from "../hooks/use-site-metadata.js";
+import { HeadContent } from "../components";
 import logoDataURI from "./hexmen-logo-2020-10-13.svg";
 
-export default function (props) {
+export default function Layout(props) {
   const { pageContext = {}, frontmatter = {} } = props;
   const { slug } = pageContext;
-  const meta = useSiteMetadata();
-  const { title = "" } = frontmatter;
 
   return (
     <>
-      <Helmet>
-        <title>{title} | Hexmen</title>
-        <link rel="canonical" href={`${meta.siteUrl}${slug}`} />
-      </Helmet>
+      <HeadContent pageContext={pageContext} frontmatter={frontmatter} />
       <header
         className="branding"
         style={{

@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 import moment from "moment";
-import { SiteFooter } from "../../components";
+import { HeadContent, SiteFooter } from "../../components";
 import logoDataURI from "../../components/hexmen-logo-2020-10-13.svg";
 import "../style.css";
 
@@ -39,12 +39,18 @@ const BlogNav = ({ previous, next }) => {
   );
 };
 
-export default function (props) {
+export default function BlogHomepage(props) {
   const [mostRecentPost, previousPost] = props.data.allMarkdownRemark.nodes;
-  const { frontmatter } = mostRecentPost;
+  const { frontmatter, excerpt } = mostRecentPost;
   const publishedDate = moment(frontmatter.date).format("D MMM YYYY");
   return (
     <>
+      <HeadContent
+        frontmatter={{
+          ...frontmatter,
+          excerpt,
+        }}
+      />
       <header className="branding">
         <h1 style={{ display: "flex", alignItems: "center", fontSize: "2rem", lineHeight: 1.2 }}>
           <img style={{ height: "1em" }} src={logoDataURI} alt="" />
@@ -82,12 +88,14 @@ export const pagesQuery = graphql`
         id
         timeToRead
         html
+        excerpt
         fields {
           slug
         }
         frontmatter {
           title
           date
+          modified
         }
       }
     }

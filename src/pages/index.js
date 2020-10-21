@@ -1,44 +1,15 @@
 import React from "react";
-import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
 import moment from "moment";
-import useSiteMetadata from "../hooks/use-site-metadata.js";
-import { SiteFooter } from "../components";
+import { HeadContent, SiteFooter } from "../components";
 import logoDataURI from "../components/hexmen-logo-2020-10-13.svg";
 import "./style.css";
 
-export default function (props) {
+export default function Homepage(props) {
   const recentPosts = props.data.allMarkdownRemark.nodes;
-  const siteMetadata = useSiteMetadata();
-  const { siteUrl } = siteMetadata;
-  const metaNamedProperties = {
-    author: siteMetadata.author,
-    description: siteMetadata.description,
-    // "twitter:card": "summary",
-    "twitter:site": siteMetadata.social.twitter,
-  };
-  const metaProperties = {
-    // Open Graph uses 'property' attribute:
-    "og:url": siteUrl,
-    "og:type": "website",
-    "og:title": siteMetadata.title,
-    "og:description": siteMetadata.description,
-    "og:image": `${siteUrl}/images/profile-ash.jpg`,
-    "og:image:alt": "Wet plate portrait photo",
-    "og:updated_time": new Date().toISOString(),
-  };
   return (
     <>
-      <Helmet htmlAttributes={{ lang: "en-GB" }}>
-        <title>{siteMetadata.title}</title>
-        <link rel="shortcut icon" href={`${siteUrl}/favicon-32x32.png`} />
-        {Object.entries(metaNamedProperties).map(([name, content]) => (
-          <meta key={name} name={name} content={content} />
-        ))}
-        {Object.entries(metaProperties).map(([property, content]) => (
-          <meta key={property} property={property} content={content} />
-        ))}
-      </Helmet>
+      <HeadContent />
       <header className="branding">
         <h1 style={{ display: "flex", alignItems: "center", fontSize: "2rem", lineHeight: 1.2 }}>
           <img style={{ height: "1em" }} src={logoDataURI} alt="" />

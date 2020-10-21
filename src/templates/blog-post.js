@@ -42,10 +42,16 @@ export default function BlogPostTemplate(props) {
   const { pageContext, data } = props;
   const { markdownRemark } = data;
   const { previous, next } = pageContext;
-  const { frontmatter } = markdownRemark;
+  const { frontmatter, excerpt } = markdownRemark;
   const publishedDate = moment(frontmatter.date).format("D MMM YYYY");
   return (
-    <Layout pageContext={pageContext} frontmatter={frontmatter}>
+    <Layout
+      pageContext={pageContext}
+      frontmatter={{
+        ...frontmatter,
+        excerpt,
+      }}
+    >
       <article>
         <h1>{frontmatter.title}</h1>
         <div className="byline">
@@ -62,11 +68,13 @@ export default function BlogPostTemplate(props) {
 export const query = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
+      excerpt
       html
       timeToRead
       frontmatter {
         title
         date
+        modified
       }
     }
   }

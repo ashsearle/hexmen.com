@@ -1,8 +1,7 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 import moment from "moment";
-import { HeadContent, SiteFooter } from "../components";
-import logoDataURI from "../components/hexmen-logo-2020-10-13.svg";
+import { HeadContent, Branding, SiteFooter } from "../components";
 import "./style.css";
 
 export default function Homepage(props) {
@@ -10,16 +9,7 @@ export default function Homepage(props) {
   return (
     <>
       <HeadContent />
-      <header className="branding">
-        <h1 style={{ display: "flex", alignItems: "center", fontSize: "2rem", lineHeight: 1.2 }}>
-          <img style={{ height: "1em" }} src={logoDataURI} alt="" />
-          <span>Hexmen</span>
-        </h1>
-        <div className="line-layout gap-s">
-          <Link to="/about/">About</Link>
-          <Link to="/contact/">Contact</Link>
-        </div>
-      </header>
+      <Branding slug="/" />
       <main>
         <section id="recent">
           <h2>Recent posts</h2>

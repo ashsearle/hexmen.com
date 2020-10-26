@@ -36,14 +36,6 @@ h6 code {
   font-size: inherit;
   line-height: inherit;
 }
-.branding {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-.branding img {
-  margin-bottom: 0;
-}
 .byline {
   margin-top: -0.725rem;
   margin-bottom: 0.725rem;

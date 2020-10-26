@@ -36,9 +36,22 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     {
-      resolve: "gatsby-plugin-typography",
+      resolve: "gatsby-plugin-webfonts",
       options: {
-        pathToConfigModule: "src/utils/typography",
+        fonts: {
+          google: [
+            {
+              family: "Arvo",
+              variants: ["700"],
+              strategy: "cdn",
+            },
+            {
+              family: "Cabin",
+              variants: ["400", "400i", "700"],
+              strategy: "cdn",
+            },
+          ],
+        },
       },
     },
     `gatsby-plugin-sitemap`,

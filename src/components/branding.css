@@ -1,0 +1,16 @@
+.branding {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.branding img {
+  margin-bottom: 0;
+}
+.branding a {
+  color: #3f51b5;
+  /*   text-decoration: none;
+    background: linear-gradient(#2196f3, #3f51b5);
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}

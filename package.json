@@ -8,8 +8,8 @@
   "private": true,
   "scripts": {
     "develop": "gatsby develop -H 0.0.0.0",
-    "build": "gatsby build --prefix-paths",
-    "serve": "gatsby serve --prefix-paths",
+    "build": "gatsby build",
+    "serve": "cd public && NODE_ENV=production PORT=9000 serve",
     "clean": "gatsby clean",
     "lint": ""
   },
@@ -40,5 +40,8 @@
     "react-typography": "^0.16.19",
     "typography": "^0.16.19",
     "typography-theme-doelger": "^0.16.19"
+  },
+  "devDependencies": {
+    "https-localhost": "^4.6.3"
   }
 }

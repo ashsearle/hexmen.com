@@ -2,6 +2,7 @@
 title: "Running .tsx from the command-line"
 blurb: "A few setup steps to help write and run .tsx from the command-line"
 date: "2020-11-30T15:24:33.495Z"
+modified: "2020-11-30T18:39:57.962Z"
 ---
 
 I know how to [run a `.jsx` file using `babel-node`](../run-jsx-from-command-line/), but now want to add TypeScript to the mix.
@@ -159,10 +160,10 @@ esbuild index.tsx --bundle | node -
          3 │ if (process.env.NODE_ENV === 'production') {
            ╵     ~~~~~~~~~~~~~~~~~~~~
 
-That's a good error message; the resolution is clear:
+That's a good error message; we should bundle for node:
 
 ```bash
-npx esbuild index.tsx --bundle --define:process.env.NODE_ENV=\"production\" | node -
+npx esbuild index.tsx --bundle --platform=node | node -
 ```
 
 Output:
@@ -171,7 +172,16 @@ Output:
 <div>The app</div>
 ```
 
-Great, that's working.
+Excellent. That was an easy fix.
+
+I'm aware I may want to run the development React build (with warnings) during development, and production builds for speed or if I want to ignore warnings for some reason. For completeness I want to note two ways to do this:
+
+```bash
+# 1. Use `esbuild --define`
+npx esbuild index.tsx --bundle --define:process.env.NODE_ENV=\"production\" | node -
+# 2. Set NODE_ENV environment variable for node:
+npx esbuild index.tsx --bundle --platform=node | NODE_ENV=production node -
+```
 
 ## TypeScript is ignored
 

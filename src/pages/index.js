@@ -12,22 +12,24 @@ export default function Homepage(props) {
       <Branding slug="/" />
       <main>
         <section id="recent">
-          <h2>Recent posts</h2>
-          {recentPosts.map((post) => (
-            <article key={post.id}>
-              <header>
-                <h3>
-                  <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
-                </h3>
-                <span className="post-meta">
-                  <time dateTime={post.frontmatter.date}>
-                    {moment(post.frontmatter.date).fromNow()}
-                  </time>{" "}
-                  {" | "} {post.timeToRead} min read
-                </span>
-              </header>
-            </article>
-          ))}
+          <div className="container">
+            <h2>Recent posts</h2>
+            {recentPosts.map((post) => (
+              <article key={post.id}>
+                <header>
+                  <h3>
+                    <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
+                  </h3>
+                  <span className="post-meta">
+                    <time dateTime={post.frontmatter.date}>
+                      {moment(post.frontmatter.date).fromNow()}
+                    </time>{" "}
+                    {" | "} {post.timeToRead} min read
+                  </span>
+                </header>
+              </article>
+            ))}
+          </div>
         </section>
       </main>
       <SiteFooter />

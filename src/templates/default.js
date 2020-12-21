@@ -7,8 +7,10 @@ export default function DefaultTemplate(props) {
   const { pageContext } = props;
   return (
     <Layout pageContext={pageContext}>
-      <h1>{props.data.markdownRemark.frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }} />
+      <div class="container">
+        <h1>{props.data.markdownRemark.frontmatter.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }} />
+      </div>
       <SiteFooter />
     </Layout>
   );

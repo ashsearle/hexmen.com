@@ -6,10 +6,12 @@ import "./branding.css";
 export default function Branding({ slug }) {
   return (
     <header className="branding">
-      <LogoType slug={slug} />
-      <div className="line-layout gap-s">
-        {slug === "/about/" ? null : <Link to="/about/">About</Link>}
-        {slug === "/contact/" ? null : <Link to="/contact/">Contact</Link>}
+      <div className="container">
+        <LogoType slug={slug} />
+        <div className="line-layout gap-s">
+          {slug === "/about/" ? null : <Link to="/about/">About</Link>}
+          {slug === "/contact/" ? null : <Link to="/contact/">Contact</Link>}
+        </div>
       </div>
     </header>
   );

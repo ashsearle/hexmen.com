@@ -14,3 +14,38 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; */
 }
+.burger-menu-trigger {
+  display: block;
+  padding: 0;
+  background: none;
+  border: none;
+  /* top: 12px */
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.burger-menu-icon {
+  width: 32px;
+  height: 32px;
+  transform: rotate(0deg);
+  display: block;
+  overflow: visible;
+  transform-origin: center center;
+}
+.burger-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: auto;
+  left: 0;
+  right: 0;
+  width: auto;
+  z-index: 1;
+  backdrop-filter: blur(6px);
+  background-color: #fff8;
+  overflow: auto;
+  overscroll-behavior-y: contain;
+  padding: 1rem;
+}

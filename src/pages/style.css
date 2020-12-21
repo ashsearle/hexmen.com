@@ -14,6 +14,26 @@ body {
   margin: 0 auto;
   max-width: 80ch;
 }
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+}
+@media (min-width: 769px) {
+  .mobile-only {
+    display: none !important;
+  }
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
 main {
   flex-grow: 1;
 }
@@ -47,6 +67,16 @@ h6 code {
 }
 .line-layout.gap-s > * + * {
   margin-left: 1ch;
+}
+.stack-layout {
+  display: flex;
+  flex-direction: column;
+}
+.stack-layout.gap-s > * + * {
+  margin-top: 1ch;
+}
+.flex-grow {
+  flex-grow: 1;
 }
 @media (max-width: 600px) {
   .container {

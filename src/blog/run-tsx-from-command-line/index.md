@@ -230,3 +230,23 @@ yarn --silent ts-node --swc index.tsx
 yarn add typescript
 yarn --silent ts-node --swc index.tsx
 ```
+
+## Running with bun
+
+```bash
+bun add react react-dom
+bun run index.tsx
+```
+
+At time of writing bun doesn't implement `process.stdout`, so the code needed modifying to write to stdout using a different method:
+```js
+// → TypeError: undefined is not an object (evaluating 'process.stdout.write')
+process.stdout.write(renderToStaticMarkup(<App />));
+// Bun-specific solution doesn't work due to an issue:
+// https://github.com/oven-sh/bun/issues/646
+Bun.write(Bun.stdout, renderToStaticMarkup(<App/>));
+// An alernative preserving the 'no newline' behaviour:
+require('fs').writeFileSync("/dev/stdout", renderToStaticMarkup(<App />), "utf-8")
+// USing console.log adds newline, so is a change in behaviour:
+console.log(renderToStaticMarkup(<App />));
+```

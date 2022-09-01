@@ -204,3 +204,29 @@ When run with `ts-node`, `babel-node` and `esbuild`, only `ts-node` shows the ap
                         ~~~~~~~~~~~
 
 This is a signifcant difference, and important not to overlook when deciding which method to adopt to run TypeScript.
+
+## Using swc transpiler with ts-node
+
+Attempting to run without installing react packages first doesn't work:
+```bash
+npx --package=react --package=react-dom --package=@swc/core --package=ts-node -c 'ts-node --swc --compilerOptions {\"jsx\":\"react\"} index.tsx'
+```
+
+But assuming we have `index.tsx` and install react packages as usual, we can run use ts-node without installing typescript to run the script using the swc transpiler:
+```bash
+yarn init -y
+yarn add react react-dom
+npx --package=@swc/core --package=ts-node -c 'ts-node --swc --compilerOptions {\"jsx\":\"react\"} index.tsx'
+# Alternative syntax:
+npx --package=@swc/core --package=ts-node ts-node --swc --compilerOptions '{"jsx":"react"}' index.tsx
+```
+```bash
+cd $(mktemp -d)
+yarn init -y
+yarn add react react-dom ts-node @swc/core
+# Theoretically we shouldn't have to install typescript, but we still do:
+yarn --silent ts-node --swc index.tsx
+# → Error: Cannot find module 'typescript'
+yarn add typescript
+yarn --silent ts-node --swc index.tsx
+```

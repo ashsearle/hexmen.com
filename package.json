@@ -8,9 +8,10 @@
   "private": true,
   "scripts": {
     "develop": "gatsby develop -H 0.0.0.0",
+    "clean": "gatsby clean",
     "build": "gatsby build",
     "serve": "cd public && NODE_ENV=production PORT=9000 serve",
-    "clean": "gatsby clean",
+    "deploy": "rsync -avz --dry-run --exclude-from=.rsyncignore --delete public/ hexmen:public_html/",
     "lint": ""
   },
   "husky": {

@@ -17,8 +17,10 @@ const BurgerMenu = ({ slug, setMenuVisible }) => {
       <div className="line-layout gap-s">
         <div className="stack-layout gap-s flex-grow">
           {slug === "/blog/" ? null : <Link to="/blog/">Blog</Link>}
+          {/*
           {slug === "/about/" ? null : <Link to="/about/">About</Link>}
           {slug === "/contact/" ? null : <Link to="/contact/">Contact</Link>}
+          */}
         </div>
         <div
           style={{
@@ -58,6 +60,7 @@ export default function Branding({ slug }) {
     <header className="branding">
       <div className="container">
         <LogoType slug={slug} />
+        {/*
         <div className="line-layout gap-s desktop-only">
           {slug === "/about/" ? null : <Link to="/about/">About</Link>}
           {slug === "/contact/" ? null : <Link to="/contact/">Contact</Link>}
@@ -73,6 +76,7 @@ export default function Branding({ slug }) {
             <div className="sr-only">Toggle mobile menu</div>
           </button>
         </div>
+        */}
       </div>
       {menuVisible ? <BurgerMenu slug={slug} setMenuVisible={setMenuVisible} /> : null}
     </header>

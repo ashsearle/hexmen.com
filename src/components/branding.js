@@ -8,7 +8,7 @@ const BurgerMenuIcon = ({ d }) => (
     <path d={d}></path>
   </svg>
 );
-const openBurgerMenuIcon = <BurgerMenuIcon d="M4.8,9.6L27.2,9.6M4.8,22.4L27.2,22.4" />;
+// const openBurgerMenuIcon = <BurgerMenuIcon d="M4.8,9.6L27.2,9.6M4.8,22.4L27.2,22.4" />;
 const closeBurgerMenuIcon = <BurgerMenuIcon d="M0,0L32,32M0,32L32,0" />;
 
 const BurgerMenu = ({ slug, setMenuVisible }) => {

@@ -1,7 +1,7 @@
-import React from "react";
 import { Link } from "gatsby";
-import LogoType from "./logo-type.js";
+import React from "react";
 import "./branding.css";
+import LogoType from "./logo-type.js";
 
 const BurgerMenuIcon = ({ d }) => (
   <svg className="burger-menu-icon" stroke="currentColor" strokeWidth="3" strokeLinecap="round">

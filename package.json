@@ -12,6 +12,8 @@
     "build": "gatsby build",
     "serve": "cd public && NODE_ENV=production PORT=9000 serve",
     "deploy": "rsync -avz --exclude-from=.rsyncignore --delete public/ hexmen:public_html/",
+    "check": "biome check --indent-style=space --line-width=100 src",
+    "check:fix": "biome check --indent-style=space --line-width=100 --apply src",
     "lint": ""
   },
   "husky": {
@@ -20,7 +22,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,json,css,md,html}": "prettier --write"
+    "*.{js,json,css,md,html}": "biome format --indent-style=space --line-width=100 --write"
   },
   "dependencies": {
     "gatsby": "^2.24.80",
@@ -33,14 +35,14 @@
     "gatsby-remark-vscode": "^3.1.0",
     "gatsby-source-filesystem": "^2.3.35",
     "gatsby-transformer-remark": "^2.8.42",
-    "husky": "^4.3.0",
-    "lint-staged": "^10.4.2",
-    "prettier": "^2.1.2",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
-    "https-localhost": "^4.6.3"
+    "@biomejs/biome": "1.6.1",
+    "https-localhost": "^4.6.3",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.2"
   }
 }

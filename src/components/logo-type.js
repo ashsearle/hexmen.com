@@ -1,5 +1,5 @@
-import React from "react";
 import { Link } from "gatsby";
+import React from "react";
 import logoDataURI from "./hexmen-logo-2020-10-13.svg";
 
 export default function LogoType({ slug }) {

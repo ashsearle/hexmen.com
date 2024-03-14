@@ -1,5 +1,5 @@
-import React from "react";
 import { Link } from "gatsby";
+import React from "react";
 
 const BlogNav = ({ previous, next }) => {
   if (!previous && !next) {

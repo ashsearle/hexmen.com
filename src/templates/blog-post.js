@@ -1,7 +1,7 @@
-import React from "react";
 import { graphql } from "gatsby";
 import moment from "moment";
-import { Layout, BlogNav } from "../components";
+import React from "react";
+import { BlogNav, Layout } from "../components";
 import "../pages/style.css";
 
 export default function BlogPostTemplate(props) {

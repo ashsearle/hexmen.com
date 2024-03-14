@@ -1,7 +1,7 @@
-import React from "react";
 import { graphql } from "gatsby";
 import moment from "moment";
-import { HeadContent, Branding, SiteFooter, BlogNav } from "../../components";
+import React from "react";
+import { BlogNav, Branding, HeadContent, SiteFooter } from "../../components";
 import "../style.css";
 
 export default function BlogHomepage(props) {

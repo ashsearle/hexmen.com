@@ -30,7 +30,9 @@ export default function HeadContent(props) {
     "og:image:alt": "Wet plate portrait photo",
     "og:updated_time": new Date().toISOString(),
     ...(frontmatter?.date && { "article:published_time": frontmatter.date }),
-    ...(frontmatter?.modified && { "article:modified_time": frontmatter.modified }),
+    ...(frontmatter?.modified && {
+      "article:modified_time": frontmatter.modified,
+    }),
     ...props.metaProperties,
   };
   return (

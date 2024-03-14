@@ -1,7 +1,7 @@
-import React from "react";
-import { graphql, Link } from "gatsby";
+import { Link, graphql } from "gatsby";
 import moment from "moment";
-import { HeadContent, Branding, SiteFooter } from "../components";
+import React from "react";
+import { Branding, HeadContent, SiteFooter } from "../components";
 import "./style.css";
 
 export default function Homepage(props) {

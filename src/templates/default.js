@@ -1,6 +1,6 @@
-import React from "react";
 import { graphql } from "gatsby";
-import { SiteFooter, Layout } from "../components/";
+import React from "react";
+import { Layout, SiteFooter } from "../components/";
 import "../pages/style.css";
 
 export default function DefaultTemplate(props) {
